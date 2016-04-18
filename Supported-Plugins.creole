@@ -1,0 +1,24 @@
+== [[Vault|http://dev.bukkit.org/bukkit-plugins/vault/]] ==
+SkillAPI allows for skills setting permissions through Vault
+
+== [[Lib's Disguises|https://www.spigotmc.org/resources/libs-disguises.81/]]
+SkillAPI allows for disguising players and mobs in skills through Lib's Disguises
+
+== [[Paries|http://dev.bukkit.org/bukkit-plugins/skillapi-parties/]] ==
+Paries is a SkillAPI-specific party plugin that allows for shared experience between members. It also has built-in support for the "Instances" plugin.
+
+== [[Mythic Mobs|http://dev.bukkit.org/bukkit-plugins/mythicmobs/]] ==
+Mythic Mobs provides experience yields for SkillAPI.
+
+== [[Beton Quest|http://dev.bukkit.org/bukkit-plugins/betonquest/]] ==
+Beton Quests provides built-in options for use with SkillAPI
+
+== [[Quests|https://www.spigotmc.org/resources/quests.3711/]] ==
+SkillAPI adds a module for the Quests plugin, allowing quests to require or reward players with SkillAPI features.
+=== Rewards ===
+| Experience | This provides Quests with a reward option that gives a player class experience for SkillAPI |
+| Class | This provides Quests with a reward option that sets the class of a player, allowing for quests that can progress a player through their class progression. |
+
+=== Requirements ===
+| Class Level Requirement | This provides Quests with a requirement option that requires a player to be a certain class level. |
+| Class Requirement | This provides Quests with a requirement option that requires a player to be a certain class or a profession of that class. Multiple classes are also supported by separating them with commas (e.g. Warrior,Magician) |
