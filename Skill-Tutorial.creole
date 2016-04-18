@@ -1,0 +1,211 @@
+== Step 1 - Extend Skill ==
+To begin, you need to make a java class that extends Skill. This is the base class provided by SkillAPI that acts as a template for a skill. Your class should look something like this:
+{{{
+public class MySkill extends Skill
+}}}
+== Step 2 - The Constructor ==
+Skill provides four different constructors for you to use. What one you use depends on what you want the skill to be. The four options are:
+{{{
+//This constructor is to make a basic skill with the default layout for the icon. 
+// The "name" is what you want to call the skill. This is used to cast the skill via
+// command, bind the skill, and it is what shows up in messages and the icon.
+// The "type" is just flavor text you want to use to classify the skill. Common examples
+// would be something like "AOE Utility" or "Single Target"
+// The "indicator" is the type of item you want to use to represent your skill. This is
+// displayed in the skill tree GUI
+// The "maxLevel" is what level your skill can be upgraded to. 
+Skill(String name, String type, Material indicator, int maxLevel);
+
+// This constructor is the same as the previous one except it also lets you have the skill require
+// another skill to  be leveled up before it can be upgraded itself.
+// The "skillReq" is the name of the skill you want to require.
+// The "skillReqLevel" is the level which the skill must reach before you can upgrade this one
+Skill(String name, String type, Material indicator, int maxLevel, String skillReq, int skillReqLevel);
+
+// This is the same as the first option, except the indicator can have extra data put onto it
+// such as MaterialData or durability to get the exact item you want. It can also have lore or
+// a custom name put on it to override the default layout for the skill icon
+Skill(String name, String type, ItemStack indicator, int maxLevel);
+
+// This is like the previous one, but has the same requirement options as the second constructor.
+Skill(String name, String type, ItemStack indicator, int maxLevel, String skillReq, int skillReqLevel);
+}}}
+== Step 3 - Description ==
+You can give a description for the skill which will show up in the icon text. To add to the description, use this method:
+{{{
+// You can add as many lines as you want.
+// It is suggested to keep lines between 20-30 characters on average
+getDescription().add("line of text");
+}}}
+== Step 4 - Attributes ==
+You can set attributes for the skill to either control built-in settings like cooldown, skill point cost, mana cost, or level requirement. These can also be used to set your own values to use in your mechanics. All the attributes you set will be automatically configurable. Here\'s how to set them:
+{{{
+// The general method structure:
+// settings.set(String key, double base, double scale);
+// settings.set(String key, Object value);
+//
+// The "base" is how much the attribute starts with at level 1
+// The "scale" is how much it increases each time the skill is leveled up
+//
+// Just providing one argument lets you store non-scaling things like strings, ints, etc.
+
+// The level requirement for the skill. The player must reach the given level before being
+// able to unlock/upgrade the skill.
+settings.set(SkillAttribute.LEVEL, 1, 1);
+
+// This is how many skill points it costs to unlock/upgrade the skill
+settings.set(SkillAttribute.COST, 1, 0);
+
+// The cooldown of the skill or how much time a player must wait before casting it again
+settings.set(SkillAttribute.COOLDOWN, 10, -1);
+
+// The mana cost of the skill. The mana will be consumed when the skill is successfully cast.
+// If a player doesn\'t have enough mana, the skill will not be castable. If mana is disabled,
+// this will not do anything.
+settings.set(SkillAttribute.MANA, 10, 2);
+
+// You can define as many custom attributes as you want using strings as keys
+settings.set("Damage", 5, 2);
+settings.set("Duration", 3, 1);
+}}}
+== Step 5 - Implementing a Skill Type ==
+Your skill should implement one of the three available interfaces to line it up with the API. You can implement more than one if you want to, although generally this is not necessary. The available interfaces are:
+=== SkillShot ===
+{{{
+// Interface for skills that can be cast without a direct target.
+// Common applications would include firing projectiles, self-targeting
+// skills, and AOE abilities around yourself or where you are looking.
+public interface SkillShot {
+ 
+    // Handles casting the skill without a specific target. This is to be used for non-target
+    // skills such as skills that apply to your reticle, AOE skills around yourself, or
+    // other skills that do not need a direct target.
+    // This provides who is casting the skill and the level they have reached for the skill
+    public boolean cast(LivingEntity user, int level);
+}
+}}}
+=== TargetSkill ===
+{{{
+// Interface for skills that can only be cast on a direct target.
+// Common applications would include striking a single enemy, 
+// charging to the target, swapping places, or effects like that.
+public interface TargetSkill {
+
+    // Handles casting the skill when a direct target is present.
+    // This provides who is casting the skill, the level of the skill they have reached,
+    // who they are targeting, and whether or not the target is an ally of the caster.
+    public boolean cast(LivingEntity user, LivingEntity target, int level, boolean ally);
+}
+}}}
+=== PassiveSkill ===
+{{{
+// This interface doesn\'t give a skill the ability to be cast, but provides
+// ways to set up and clean up skills that act the moment the player gets
+// the skill and stop when they lose the skill, die, or log off.
+public interface PassiveSkill {
+
+    // Requests the skill to be updated for the user when they upgrade the skill.
+    // Generally you will remove old effects and apply the new effect if it is
+    // something like a lasting buff. If you are getting the data each application,
+    // you may not need to do anything to update the skill.
+    public void update(LivingEntity user, int prevLevel, int newLevel);
+
+    // This tells you when to set up the skill for a user. This will be called
+    // when the user logs in, spawns, or unlocks the skill. You may add the
+    // user to a list or a map to mark them as having the skill active or
+    // you could just apply a permanent buff until told to remove it.
+    public void initialize(LivingEntity user, int level);
+
+    // This is where you would clean up the effects for the user, removing
+    // them from lists or removing buffs from them. This is called when the
+    // user dies, logs out, or downgrades the skill back to level 0.
+    public void stopEffects(LivingEntity user, int level);
+}
+}}}
+== Step 6 - Events ==
+If you need to use events in your skill, you just need to implement Bukkit\'s Listener class and SkillAPI will automatically handle registering your EventHandler methods.
+=== Example Skill ===
+{{{
+import com.rit.sucy.player.Protection;
+import com.sucy.skill.api.skills.Skill;
+import com.sucy.skill.api.skills.SkillAttribute;
+import com.sucy.skill.api.skills.SkillShot;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.ThrownPotion;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PotionSplashEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.potion.Potion;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+import org.bukkit.potion.PotionType;
+
+public class HealthPotion extends Skill implements SkillShot, Listener {
+
+    public static final String NAME = "Health Potion";
+    private static final String
+            HEAL_AMOUNT = "Heal Amount",
+            BONUS_DURATION = "Bonus Duration";
+
+    public HealthPotion() {
+        super(NAME, "AOE Heal", Material.GOLDEN_APPLE, 5);
+
+        getDescription().add("Launches a potion that");
+        getDescription().add("heals allies over time");
+        getDescription().add("and grants bonus health");
+        getDescription().add("for a short time.");
+
+        settings.set(SkillAttribute.LEVEL, 1, 1);
+        settings.set(SkillAttribute.COST, 1, 0);
+        settings.set(SkillAttribute.COOLDOWN, 12, -1);
+        settings.set(SkillAttribute.MANA, 18, -1);
+
+        settings.set(HEAL_AMOUNT, 6, 2);
+        settings.set(BONUS_DURATION, 6, 2);
+    }
+
+    @Override
+    public boolean cast(LivingEntity user, int level) {
+
+        Potion potion = new Potion(PotionType.REGEN, 1);
+        potion.setSplash(true);
+
+        ItemStack item = new ItemStack(Material.POTION);
+        potion.apply(item);
+
+        ThrownPotion thrownPotion = user.launchProjectile(ThrownPotion.class);
+        thrownPotion.setItem(item);
+
+        Plugin plugin = Bukkit.getPluginManager().getPlugin("SkillAPI");
+        thrownPotion.setMetadata(NAME, new FixedMetadataValue(plugin, level));
+
+        return true;
+    }
+
+    @EventHandler
+    public void onPotionSplash(PotionSplashEvent event) {
+        if (event.getEntity().hasMetadata(NAME)) {
+            int level = event.getEntity().getMetadata(NAME).get(0).asInt();
+            int regenDuration = (int)(12 * settings.getAttr(HEAL_AMOUNT, level));
+            int healthDuration = (int)(20 * settings.getAttr(BONUS_DURATION, level));
+
+            PotionEffect healEffect = new PotionEffect(PotionEffectType.REGENERATION, regenDuration, 2);
+            PotionEffect healthEffect = new PotionEffect(PotionEffectType.HEALTH_BOOST, healthDuration, 0);
+            for (LivingEntity entity : event.getAffectedEntities()) {
+                if (Protection.isAlly((Player) event.getEntity().getShooter(), entity)) {
+                    entity.addPotionEffect(healEffect);
+                    entity.addPotionEffect(healthEffect);
+                }
+            }
+
+            event.getAffectedEntities().clear();
+        }
+    }
+}
+}}}
