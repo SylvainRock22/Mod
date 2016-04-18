@@ -1,0 +1,19 @@
+SkillAPI provides a module for the Quests plugin that is installed for you automatically on the first run. This module adds a few rewards and requirements for the Quests system to integrate SkillAPI with it. The added requirements and rewards are the following:
+
+== Class Experience Reward ==
+Reward Name: Experience
+What is it?: This provides Quests with a reward option that gives a player class experience for SkillAPI
+
+== Class Reward ==
+Reward Name: Class
+What is it?: This provides Quests with a reward option that sets the class of a player, allowing for quests that can progress a player through their class progression.
+
+== Class Level Requirement ==
+Requirement Name: Class Level Requirement
+What is it?: This provides Quests with a requirement option that requires a player to be a certain class level.
+
+== Class Requirement ==
+Requirement Name: Class Requirement
+What is it?: This provides Quests with a requirement option that requires a player to be a certain class or a profession of that class. Multiple classes are also supported by separating them with commas (e.g. Warrior,Magician) 
+
+All of these are automatically set up and should be available in the in-game quest creator that Quests has. Enjoy your expanded Quests experience!
