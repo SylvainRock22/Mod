@@ -1,0 +1,17 @@
+****Will SkillAPI and MCCore be ported to Sponge?****
+Yes, Sponge support for both are planned.
+
+****Some of SkillAPI's features aren't working / SkillAPI isn't working at all!****
+Install the correct version of MCCore, and make sure you are running the right Bukkit/Spigot version. Cauldron, Sponge, etc. are not supported and may break some of SkillAPI's features. If you report any bug, please first ensure that you are running Bukkit or Spigot, and are using the right version.
+
+Why Cauldron, Sponge, Glowstone... or any other server type may not work:
+
+Plugins written on dev.bukkit.org/bukkit-plugins/ are written to work on bukkit code. Plugins that are for bukkit 1.8 or 1.8.3 work on Spigot's "bukkit" 1.8, or spigot itself.
+
+Many players have reported the Crouch trigger not working with Cauldron. This is because Cauldron uses different code from bukkit. For example, lets say bukkit's crouch event is called CROUCH, and Cauldron's is called SHIFT (I'm not actually sure what they are). A plugin wrote for bukkit will say to test for CROUCH, so if you're running Cauldron it won't recognize it.
+
+****How do I change combos?****
+You can edit your combos with /class combo. Combos are also set by default in your skill configurations.
+
+****My HP/Damage Plugin isn't working due to SkillAPI! What should I do?****
+Disable health modification or attributes/statuses in the config. This should prevent all interference from SkillAPI. If your plugin has priorities, set their Damage/HP modification to highest.
