@@ -2,7 +2,7 @@
 
 The main commands for SkillAPI
 
-**/class acc <accountId>**
+**/class acc <accountId>**  
 User: player only  
 This changes the current active account for the player
 
