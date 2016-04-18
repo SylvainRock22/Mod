@@ -21,6 +21,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 | [[SQL Database|Database]] | Fully supports saving to an SQL database, allowing for cross-server use |
 | [[Experience Curves|Experience]] | Allows for fully custom experience curve formulas so you can control how fast players level |
 | [[Multiworld Support|Worlds]] | Can be disabled in any given world or worlds so it doesn't interfere with other game modes |
+| [[Custom Statuses|Custom Statuses]] | Stuns, roots, silences, and more are provided by the plugin ]]
 | [[Chat Prefixes|Chat Prefixes]] | Add colorful names reflecting players' professed classes |
 
 === Tutorials ===
