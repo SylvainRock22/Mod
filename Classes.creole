@@ -1,0 +1,18 @@
+== Overview ==
+Players are able to profess into classes that each have their own sets of skills, damage, health, and mana. Each class can also profess into additional classes one they reach the required levels. 
+
+{{http://dev.bukkit.org/media/images/66/223/classOptions.png|Class Professions}}
+
+== Class Progression ==
+Classes are able to progress into subclasses. Setting the "parent" of a class creates a progression. For example, a Knight having a Fighter as its parent will allow a Fighter to turn into a Knight when the player reaches the max level of a Fighter.
+
+== Class Skills == 
+Each class can have its own set of skills at its disposal. This can include passives and active abilities. Passive abilities can also allow you to create class perks such as bonus damage with weapons, or other fun mechanics.
+
+== Switching Classes ==
+
+The "/class acc <accountId>" command allows players to swap between classes while preserving their old ones.
+
+== Resetting Classes ==
+
+There is a command to reset class data so players can change in case they do not want to keep their old data (or if you restrict the switching described above to premium members).
