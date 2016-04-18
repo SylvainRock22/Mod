@@ -1,7 +1,13 @@
 **Overview**
+
+***
+
 SkillAPI is an RPG plugin for Minecraft that allows you to create custom classes and skills.
 
 **Features**
+
+***
+
 Easily create your own skills and classes
 Robust editor to make skills without any code
 Easy to use API for programmers to tap into
