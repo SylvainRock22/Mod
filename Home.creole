@@ -6,6 +6,10 @@ SkillAPI is a robust RPG plugin, allowing for the creation of custom skills and 
 Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 === Dependencies ===
 * [[MCCore|http://dev.bukkit.org/bukkit-plugins/mccore/]]
+=== Plugin Info ===
+* [[Commands|Commands]]
+* [[Permissions|Permissions]]
+* [[Default Configs|Default Configs]]
 === Features ===
 | [[Class System|Classes]] | An in-depth class system is available for your RPG or minigame server with class progression, race support, and much more |
 | [[Skills|Skills]] | Fully customizable skills allow for endless possibilities, featuring a skill tree setup and multiple skill levels |
