@@ -1,0 +1,497 @@
+== Alchemist.yml ==
+{{{
+Alchemist:
+  name: 'Alchemist'
+  prefix: '&6Alchemist'
+  group: 'class'
+  mana: '&2Mana'
+  max-level: 40
+  parent: ''
+  needs-permission: 'False'
+  mana-regen: 1
+  tree: 'Requirement'
+  combo: 0
+  skills:
+  - 'Explosion Potion'
+  - 'Flash Bang'
+  - 'Gooey Adhesive'
+  - 'Health Potion'
+  - 'Potion of Sickness'
+  - 'Immunity'
+  icon: 'Potion'
+  icon-data: 0
+  icon-lore:
+  - '&6Alchemist'
+  - ''
+  - '&7An AOE utility class that'
+  - '&7acts as a mix between'
+  - '&7supportive and offensive.'
+  attributes:
+    health-base: 25.375
+    health-scale: 0.375
+    mana-base: 100
+    mana-scale: 0
+}}}
+== Explosion Potion.yml ==
+{{{
+Explosion Potion:
+  name: 'Explosion Potion'
+  type: 'Projectile'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'TNT'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - '&2Damage: {attr:dmg.value}'
+  - ''
+  - '&7Tosses a potion that explodes'
+  - '&7and deals damage to all'
+  - '&7nearby enemies.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 10
+    cooldown-scale: -1
+    mana-base: 22
+    mana-scale: -1
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Potion Projectile-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            type: 'Fire Resistance'
+            group: 'Enemy'
+          children:
+            Damage-c:
+              type: 'mechanic'
+              data:
+                icon-key: 'dmg'
+                type: 'Damage'
+                value-base: 6
+                value-scale: 2
+            Particle-d:
+              type: 'mechanic'
+              data:
+                icon-key: ''
+                particle: 'Large Explode'
+                arrangement: 'Circle'
+                radius-base: 0
+                radius-scale: 0
+                amount-base: 1
+                amount-scale: 0
+                forward: 0
+                upward: 0
+                right: 0
+                direction: 'XZ'
+                data: 0
+                visible-radius: 25
+                dx: 0
+                dy: 0
+                dz: 0
+                speed: 1
+}}}
+== Flash Bang.yml ==
+{{{
+Flash Bang:
+  name: 'Flash Bang'
+  type: 'Utility Projectile'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'Firework Charge'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - '&2Stun: {attr:stun.duration}'
+  - ''
+  - '&7Launches a flash bomb'
+  - '&7that stuns affected enemies'
+  - '&7for a brief duration.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 12
+    cooldown-scale: -1
+    mana-base: 18
+    mana-scale: -1
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Potion Projectile-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            type: 'Strength'
+            group: 'Enemy'
+          children:
+            Status-c:
+              type: 'mechanic'
+              data:
+                icon-key: 'stun'
+                status: 'Stun'
+                duration-base: 1
+                duration-scale: 0.25
+}}}
+== Gooey Adhesive.yml ==
+{{{
+Gooey Adhesive:
+  name: 'Gooey Adhesive'
+  type: 'Utility Projectile'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'Obsidian'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - '&2Duration: {attr:slow.seconds}'
+  - ''
+  - '&7Launches a bottle of'
+  - '&7sludge that slows and'
+  - '&7blinds affected enemies.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 10
+    cooldown-scale: -1
+    mana-base: 16
+    mana-scale: -2
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Potion Projectile-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            type: 'Regen'
+            group: 'Enemy'
+          children:
+            Potion-c:
+              type: 'mechanic'
+              data:
+                icon-key: 'slow'
+                potion: 'Slow'
+                ambient: 'True'
+                tier-base: 2
+                tier-scale: 0
+                seconds-base: 1
+                seconds-scale: 0.5
+            Potion-d:
+              type: 'mechanic'
+              data:
+                icon-key: ''
+                potion: 'Blindness'
+                ambient: 'True'
+                tier-base: 1
+                tier-scale: 0
+                seconds-base: 1
+                seconds-scale: 0.5
+}}}
+== Health Potion.yml ==
+{{{
+Health Potion:
+  name: 'Health Potion'
+  type: 'Projectile'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'Golden Apple'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - '&2Heal Duration: {attr:heal.seconds}'
+  - '&2Bonus Duration: {attr:bonus:seconds}'
+  - ''
+  - '&7Launches a potion that'
+  - '&7heals allies over time'
+  - '&7and grants bonus health'
+  - '&7for a short time.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 12
+    cooldown-scale: -1
+    mana-base: 18
+    mana-scale: -1
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Potion Projectile-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            type: 'Regen'
+            group: 'Ally'
+          children:
+            Potion-c:
+              type: 'mechanic'
+              data:
+                icon-key: 'heal'
+                potion: 'Regeneration'
+                ambient: 'True'
+                tier-base: 3
+                tier-scale: 0
+                seconds-base: 3.6
+                seconds-scale: 0.6
+            Potion-d:
+              type: 'mechanic'
+              data:
+                icon-key: 'bonus'
+                potion: 'Health Boost'
+                ambient: 'True'
+                tier-base: 1
+                tier-scale: 0
+                seconds-base: 6
+                seconds-scale: 2
+}}}
+== Immunity.yml ==
+{{{
+Immunity:
+  name: 'Immunity'
+  type: 'Passive'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'Diamond'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Rank 1: &6Poison'
+  - '&2Rank 2: &6Wither'
+  - '&2Rank 3: &6Slow'
+  - '&2Rank 4: &6Weakness'
+  - '&2Rank 5: &6All Potions'
+  - '&7- Effects are cumulative -'
+  - ''
+  - '&7Grants immunity so some'
+  - '&7negative potion effects.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 0
+    cooldown-scale: 0
+    mana-base: 0
+    mana-scale: 0
+  components:
+    Initialize-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Passive-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            seconds-base: 0.5
+            seconds-scale: 0
+          children:
+            Skill Level-c:
+              type: 'condition'
+              data:
+                icon-key: ''
+                skill: 'Immunity'
+                min-level: 1
+                max-level: 4
+              children:
+                Cleanse-d:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    potion: 'Poison'
+                    status: ''
+            Skill Level-e:
+              type: 'condition'
+              data:
+                icon-key: ''
+                skill: 'Immunity'
+                min-level: 2
+                max-level: 4
+              children:
+                Cleanse-f:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    potion: 'Wither'
+                    status: ''
+            Skill Level-g:
+              type: 'condition'
+              data:
+                icon-key: ''
+                skill: 'Immunity'
+                min-level: 3
+                max-level: 4
+              children:
+                Cleanse-h:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    potion: 'Slow'
+                    status: ''
+            Skill Level-i:
+              type: 'condition'
+              data:
+                icon-key: ''
+                skill: 'Immunity'
+                min-level: 4
+                max-level: 4
+              children:
+                Cleanse-j:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    potion: 'Weakness'
+                    status: ''
+            Skill Level-k:
+              type: 'condition'
+              data:
+                icon-key: ''
+                skill: 'Immunity'
+                min-level: 5
+                max-level: 5
+              children:
+                Cleanse-l:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    potion: 'All'
+                    status: ''
+}}}
+== Potion of Sickness ==
+{{{
+Potion of Sickness:
+  name: 'Potion of Sickness'
+  type: 'Projectile'
+  max-level: 5
+  skill-req: ''
+  skill-req-level: 1
+  needs-permission: 'False'
+  icon: 'Rotten Flesh'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  - '&2Damage: {attr:dmg.value}'
+  - ''
+  - '&7Launches a diseased bottle'
+  - '&7that deals damage each'
+  - '&7second for 4 seconds and'
+  - '&7makes enemies nauseous.'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 10
+    cooldown-scale: -1
+    mana-base: 18
+    mana-scale: -1
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Potion Projectile-b:
+          type: 'mechanic'
+          data:
+            icon-key: ''
+            type: 'Poison'
+            group: 'Enemy'
+          children:
+            Potion-c:
+              type: 'mechanic'
+              data:
+                icon-key: ''
+                potion: 'Confusion'
+                ambient: 'True'
+                tier-base: 1
+                tier-scale: 0
+                seconds-base: 3
+                seconds-scale: 0.5
+            Repeat-d:
+              type: 'mechanic'
+              data:
+                icon-key: ''
+                repetitions-base: 4
+                repetitions-scale: 0
+                period: 1
+                delay: 0
+              children:
+                Damage-e:
+                  type: 'mechanic'
+                  data:
+                    icon-key: 'dmg'
+                    type: 'Damage'
+                    value-base: 1.5
+                    value-scale: 0.5
+}}}
