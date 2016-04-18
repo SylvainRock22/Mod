@@ -1,7 +1,7 @@
-**Will SkillAPI and MCCore be ported to Sponge?**
+**Will SkillAPI and MCCore be ported to Sponge?**  
 Yes, Sponge support for both are planned.
 
-****Some of SkillAPI's features aren't working / SkillAPI isn't working at all!****
+**Some of SkillAPI's features aren't working / SkillAPI isn't working at all!**  
 Install the correct version of MCCore, and make sure you are running the right Bukkit/Spigot version. Cauldron, Sponge, etc. are not supported and may break some of SkillAPI's features. If you report any bug, please first ensure that you are running Bukkit or Spigot, and are using the right version.
 
 Why Cauldron, Sponge, Glowstone... or any other server type may not work:
