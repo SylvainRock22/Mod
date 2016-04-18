@@ -1,0 +1,22 @@
+The API provides a few built-in statuses that can be applied through skills. Dynamic skills can add them as an effect and coded skills can use the StatusHolder class to apply them easily. Here is the current list of custom statuses:
+
+== Stun ==
+Stun prevents the target player from moving, using skills, attacking, or looking around. If this is applied to a mob, it just prevents them from moving.
+
+== Silence ==
+Silence prevents the target player from using skills. This does not work on mobs.
+
+== Root ==
+Root prevents the target from moving, but they can still look around. This works on mobs and players
+
+== Disarm ==
+Disarm prevents the target player from attacking. This does not work on mobs.
+
+== Absorb ==
+Absorb causes the player to heal instead of take damage. This does not work on mobs.
+
+== Curse ==
+Curse causes the player to take damage instead of being healed. This does not work on mobs.
+
+== Invincible ==
+Invincibility negates all damage the player takes. This does not work on mobs.
