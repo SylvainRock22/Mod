@@ -1,0 +1,31 @@
+Skills are cast in one of a few ways with SkillAPI. There are four methods to cast any active skill: 
+
+== Cast Command ==
+Using a command casts the skill 
+Usage: /cast <skillName>
+
+== Binding Skills ==
+Using a command allows you to right click with the item to cast the skill repeatedly 
+Usage:
+
+# assign a skill to a held item using /bind <skillName>
+# right click to cast a skill assigned to the held item
+
+== Skill Bar ==
+A detailed description can be found here 
+
+Turns your quick bar into a skill bar for easy casting of many skills 
+This must be enabled in the config via the option "use-skill-bars" 
+Usage:
+
+* 1-9 keys to cast a skill
+* Right click on slot to toggle between skills and items
+* 1-9 keys while hovering over skill in skill tree to assign it to a slot
+* Toggle the skill bar on or off individually using /class bar
+* Skill bars are disabled in creative mode due to inventory bugs
+* Cooldowns are shown on the skill bar
+
+== Click Combinations ==
+Adds 4-click combos to each active skill in their descriptions that when clicked will cast the skill 
+This must be enabled in the config via the option "use-click-combos" 
+Usage: click the combination of left or right clicks to cast a skill
