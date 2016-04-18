@@ -4,7 +4,7 @@ SkillAPI allows for skills setting permissions through Vault
 == [[Lib's Disguises|https://www.spigotmc.org/resources/libs-disguises.81/]]
 SkillAPI allows for disguising players and mobs in skills through Lib's Disguises
 
-== [[Paries|http://dev.bukkit.org/bukkit-plugins/skillapi-parties/]] ==
+== [[Parties|http://dev.bukkit.org/bukkit-plugins/skillapi-parties/]] ==
 Paries is a SkillAPI-specific party plugin that allows for shared experience between members. It also has built-in support for the "Instances" plugin.
 
 == [[Mythic Mobs|http://dev.bukkit.org/bukkit-plugins/mythicmobs/]] ==
