@@ -3,7 +3,7 @@
 The main commands for SkillAPI
 
 **/class acc <accountId>**
-User: player only 
+User: player only  
 This changes the current active account for the player
 
 **/class ap [player] amount**
