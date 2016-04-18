@@ -1,0 +1,50 @@
+== Overview ==
+Attributes allow players to invest points they earn through level up or other event you make in order to increase their stats. They are by default disabled, so you must enable them in the config.yml before using them. The exact attributes that are in your game and what they do is completely configurable. You can remove the default attributes or add new ones depending on what you want. Open up the attributes.yml file in the SkillAPI plugin folder to start changing this.
+
+== Formulas ==
+Formulas are math functions using the original value "v" and the number of attribute points "a" plugged into a mathematic expression. With these expressions, only parenthesis take priority while everything else goes from left to right order. Supported operations are:
+
+* Addition ( + )
+* Subtraction ( - )
+* Multiplication ( * )
+* Division ( / )
+* Exponent ( ^ )
+
+For an example of operator precedence, the following equations are identical and equate to 0:
+
+* 2-5*4+2(5+1)^2
+* ((2-5)*4+2(5+1))^2
+
+== Formula Examples ==
+=== Flat Change ===
+
+a*<num>+v 
+where <num>is the amount to change by per attribute point
+
+=== Percentage Change ===
+
+v(a*<num>+1) 
+where <num> is the pertentage as a decimal (e.g. 0.01 for 1%)
+
+== Dynamic Skill Modifiers ==
+Attributes can modify the numbers of dynamic skills by adding them under the "global" sections. To do so, go under the corresponding component type (condition, mechanic, or target) and start adding what you want to modify. The format for a new component is:
+
+<componentName>-<valueKey>: '<formula>'
+
+For example, modifying skill damage would be something like "Damage-value: 'a*0.025+1*v'" which gives a 2.5% increase in damage. You can look at the default "dexterity" attribute for more examples. The <componentName> part is exactly how you find it in the editor and is not case-sensitive. Space would be kept for it. The <valueKey> part is how the value appears in the config, which for the most part is the same as the tool, but can sometimes differ so be sure to check.
+
+== Stat Modifiers ==
+Attributes can directly modify certain stats as well. The format for these is very similar to the skill modifiers:
+
+<stat>: '<formula>'
+
+The <stat> part is the stat to modify, which can be one of these stats:
+
+| health | The max health of a player |
+| mana | The max health of a player |
+| mana-regen | The max health of a player |
+| physical-damage | The max health of a player |
+| physical-defense | The max health of a player |
+| skill-damage | The max health of a player |
+| skill-defense | The max health of a player |
+| move-speed | The max health of a player |
