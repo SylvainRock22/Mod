@@ -1,0 +1,30 @@
+== Permissions List ==
+=== skillapi.basic ===
+This is the base permission for any player using the API. This grants access to professing into classes, unlocking skills, and using them. Without this, a player cannot use the features of the API. This is given to everyone by default.
+
+=== skillapi.level ===
+This permission is for the admin level command that gives levels or experience to yourself or another player. This is only given to ops by default.
+
+=== skillapi.exp ===
+This permission is for allowing players to gain experience. This is given to everyone by default.
+
+=== skillapi.mana ===
+This permission allows players to give mana to other players or themselves
+
+=== skillapi.force ===
+This allows players to use the force commands if you set them to be able to be used by players (they are by default console only)
+
+=== skillapi.points ===
+This permission is for the admin points command that gives skill points to yourself or another player. This is only given to ops by default.
+
+=== skillapi.reload ===
+This permission is for reloading the configs for the API for any changes to options, skills, or classes. This is only given to ops by default.
+
+=== skillapi.class ===
+This grants access to all classes that require permissions regardless if the player has the individual permission or not
+
+=== skillapi.class.<class-name> ===
+If a class has the option "needs-permission" set to true, it will require a player to have this permission for it where <class-name> is the class's name as all lowercase and with dashes replacing spaces (e.g. Blood Mage will become blood-mage). If a player doesn't have the permission for it, it won't show up. This can be used for donator or admin classes.
+
+=== skillapi.skill.<skill-name> ===
+If a skill has the option "needs-permission" set to true, it will require a player to have this permission for it where <skill-name> is the skill's name as all lowercase and with dashes replacing spaces (e.g. Fire Arrow will become fire-arrow). If a player doesn't have the permission for it, it won't show up. This can be used for donator or admin classes or ones that are received through events such as quests.
