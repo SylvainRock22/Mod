@@ -1,8 +1,8 @@
 == Dynamic Examples: ==
-* [[Alchemist|Example/Alchemist]]
-* [[Bard|Example/Bard]]
-* [[Hunter|Example/Hunter]]
-* [[Ranger|Example/Ranger]]
+* [[Alchemist|Example/Example-Alchemist]]
+* [[Bard|Example/Example-Bard]]
+* [[Hunter|Example/Example-Hunter]]
+* [[Ranger|Example/Example-Ranger]]
 
 == Code Examples ==
-* [[Skill|skill]]
+* [[Skill|Example-Skill]]
