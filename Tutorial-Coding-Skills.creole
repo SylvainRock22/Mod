@@ -7,18 +7,24 @@ public class MySkill extends Skill
 Skill provides four different constructors for you to use. What one you use depends on what you want the skill to be. The four options are:
 {{{
 //This constructor is to make a basic skill with the default layout for the icon. 
+//
 // The "name" is what you want to call the skill. This is used to cast the skill via
 // command, bind the skill, and it is what shows up in messages and the icon.
+//
 // The "type" is just flavor text you want to use to classify the skill. Common examples
 // would be something like "AOE Utility" or "Single Target"
+//
 // The "indicator" is the type of item you want to use to represent your skill. This is
 // displayed in the skill tree GUI
+//
 // The "maxLevel" is what level your skill can be upgraded to. 
 Skill(String name, String type, Material indicator, int maxLevel);
 
 // This constructor is the same as the previous one except it also lets you have the skill require
 // another skill to  be leveled up before it can be upgraded itself.
+//
 // The "skillReq" is the name of the skill you want to require.
+//
 // The "skillReqLevel" is the level which the skill must reach before you can upgrade this one
 Skill(String name, String type, Material indicator, int maxLevel, String skillReq, int skillReqLevel);
 
