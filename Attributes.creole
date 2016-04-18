@@ -1,42 +1,21 @@
 == Overview ==
-Attributes allow players to invest points they earn through level up or other event you make in order to increase their stats. They are by default disabled, so you must enable them in the config.yml before using them. The exact attributes that are in your game and what they do is completely configurable. You can remove the default attributes or add new ones depending on what you want. Open up the attributes.yml file in the SkillAPI plugin folder to start changing this.
+Attributes provide a flexible way to control various stats which the player can invest points into. Each class can have base amounts, skills can modify them, and items can have lore which provides extra attributes.
 
-== Formulas ==
-Formulas are math functions using the original value "v" and the number of attribute points "a" plugged into a mathematic expression. With these expressions, only parenthesis take priority while everything else goes from left to right order. Supported operations are:
+== Enabling Attributes ==
+Attributes are disabled by default. To enable them, edit the config.yml and change "attributes-enabled" under "Classes" to true.
 
-* Addition ( + )
-* Subtraction ( - )
-* Multiplication ( * )
-* Division ( / )
-* Exponent ( ^ )
-
-For an example of operator precedence, the following equations are identical and equate to 0:
-
-* 2-5*4+2(5+1)^2
-* ((2-5)*4+2(5+1))^2
-
-== Formula Examples ==
-=== Flat Change ===
-
-a*<num>+v 
-where <num>is the amount to change by per attribute point
-
-=== Percentage Change ===
-
-v(a*<num>+1) 
-where <num> is the pertentage as a decimal (e.g. 0.01 for 1%)
-
-== Dynamic Skill Modifiers ==
-Attributes can modify the numbers of dynamic skills by adding them under the "global" sections. To do so, go under the corresponding component type (condition, mechanic, or target) and start adding what you want to modify. The format for a new component is:
-
-<componentName>-<valueKey>: '<formula>'
-
-For example, modifying skill damage would be something like "Damage-value: 'a*0.025+1*v'" which gives a 2.5% increase in damage. You can look at the default "dexterity" attribute for more examples. The <componentName> part is exactly how you find it in the editor and is not case-sensitive. Space would be kept for it. The <valueKey> part is how the value appears in the config, which for the most part is the same as the tool, but can sometimes differ so be sure to check.
+== Attributes.yml ==
+This is the main config file for attributes. You can completely customize them, changing which ones are available and what they do. The available options are:
+* The name of the attribute
+* The max amount of points a player can invest
+* The icon used to represent the attribute in the GUI
+* What dynamic skill settings they affect
+* The stats they effect
 
 == Stat Modifiers ==
-Attributes can directly modify certain stats as well. The format for these is very similar to the skill modifiers:
+Attributes can directly modify certain stats. The format for these is the following:
 
-<stat>: '<formula>'
+{{{<stat>: '<formula>'}}}
 
 The <stat> part is the stat to modify, which can be one of these stats:
 
@@ -48,3 +27,49 @@ The <stat> part is the stat to modify, which can be one of these stats:
 | skill-damage | The max health of a player |
 | skill-defense | The max health of a player |
 | move-speed | The max health of a player |
+
+== Dynamic Settings ==
+Attributes can modify the settings for dynamic skills. They are organized by their category (Mechanic, Target, or Condition) and have the following format:
+
+{{{<componentName>-<valueKey>: '<formula>'}}}
+
+An example which raises damage by 2% per attribute point:
+
+{{{Damage-value: 'a*0.02+1*v'}}}
+
+And another which causes more particle projectiles to be fired out:
+
+{{{Particle Projectile-amount: 'a*0.5+v'}}}
+
+You can add conditions to affect certain samples as well. Here's an example that only changes damage when the component has an Icon Key set to "example":
+
+{{{Damage-value: 'a*0.05+1*v:icon-key=example'}}}
+
+You can add multiple statements as well to target different groups. This example increases damage by 5% if the Icon Key is "example", and 2% for all other skills:
+
+{{{Damage-value: 'a*0.05+1*v:icon-key=example|a*0.02+1*v'}}}
+
+== Formulas ==
+The supported operations are:
+
+* Addition ( + )
+* Subtraction ( - )
+* Multiplication ( * )
+* Division ( / )
+* Exponent ( ^ )
+
+PEMADS rules do not apply to these formulas. They are read from left to right other than parenthesis. For an example of operator precedence, the following equations are identical and equate to 0:
+
+{{{2-5*4+2(5+1)^2}}}
+{{{((2-5)*4+2(5+1))^2}}}
+
+== Formula Examples ==
+=== Flat Change ===
+
+{{{a*<num>+v}}}
+where <num>is the amount to change by per attribute point
+
+=== Percentage Change ===
+
+{{{v(a*<num>+1)}}}
+where <num> is the pertentage as a decimal (e.g. 0.01 for 1%)
