@@ -21,4 +21,4 @@ This requirement checks to make sure the player is not the provided class or one
 
 This requirement checks if the player is at least a certain level. If there are multiple of these on a single item, the highest level requirement will apply. This is based on the player's class level, not their enchanting level. 
 
-{{{http://dev.bukkit.org/media/images/66/188/levelReq.png|Level requirement example}}}
+{{http://dev.bukkit.org/media/images/66/188/levelReq.png|Level requirement example}}
