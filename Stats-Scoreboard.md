@@ -1,0 +1,2 @@
+{{http://dev.bukkit.org/media/images/63/360/PlayerStats.png|Stats Scoreboard}}
+When enabled, a scoreboard will appear on the right hand side of the screen displaying a player's stats including their health, mana, skill points, level, and experience. The text on the scoreboard is configurable as well in case you want to change how it looks.
