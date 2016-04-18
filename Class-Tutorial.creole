@@ -100,8 +100,7 @@ setManaName(String name);
 setManaRegen(double amount);
 
 // This lets you choose what the class gains experience from. By default, classes receive
-// experience from mobs, quests, and commands. For a full list of options, view the
-// [[http://sucy.co.nf/javadoc/skillapi/?0:0;com.sucy.skill.api.enums:ExpSource|ExpSource enum]]
+// experience from mobs, quests, and commands.
 setAllowedExpSources(ExpSource ... sources);
 
 // This works similar to the previous method, although this only adds one source to the list
