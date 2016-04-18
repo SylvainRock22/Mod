@@ -19,3 +19,6 @@ Where {attr} is the type of attribute being given and {amount} is how many to gi
 
 == Customizing Formats ==
 To change any of the above formats, open the config.yml and change the options in the "Items" section.
+
+== Additional Effects ==
+You can make your own effects through passive skills as well. This opens up all the possibilities of skills to your item effects.
