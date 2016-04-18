@@ -13,22 +13,22 @@ RPGClass provides three different constructors for you to use. What one you use 
 // default group (which is "class"). This is the simplest to 
 // get started with and will likely be the one you use for your
 // first few classes.
+//
 // The "name" is simply what you want to call the class. It 
 // will be the name of the config file for the class and what 
 // players need to type in to profess as the class.
+//
 // The "icon" is the item that represents the class in menus 
 // such as when choosing a skill tree for one of the players' 
 // professed classes. Currently this isn\'t used unless you 
 // use multiple class groups, but will likely have more use 
 // later on.
+//
 // The "maxLevel" is what level the class can reach. If the 
 // class can profess into a new class, this level will also be 
 // when the player can make the change.
-}}}
-{{{
 RPGClass(String name, ItemStack icon, int maxLevel);
-}}}
-{{{
+
 // This constructor is used to make professions to your 
 // starting classes within the default group.
 // The "parent" would be the name of the class you want 
@@ -36,21 +36,17 @@ RPGClass(String name, ItemStack icon, int maxLevel);
 // For example, if you want a "Fighter" to turn into a 
 // "Warrior", you would make your "Warrior" class with 
 // this constructor and make the parent "Fighter"
-}}}
-{{{
 RPGClass(String name, ItemStack icon, int maxLevel, String parent);
-}}}
-{{{
+
 // This one is the same as the previous, except it also 
 // lets you specify a class group.
+//
 // The class group would be used to create a new branch 
 // of classes that players can profess into at the same time 
 // as the normal ones. For example, creating a class with the 
 // group "race" would allow players profess into one of the 
 // "race" classes along with one of the regular classes if 
 // you make at least one of each.
-}}}
-{{{
 RPGClass(String name, ItemStack icon, int maxLevel, String group, String parent);
 }}}
 
@@ -61,17 +57,11 @@ Next you will want to set the health and mana scaling of the class. This lets yo
 // Sets the health of the class. The first number is the health the class
 // will start with at level 1. The second number is how much health the class
 // gains per level. 
-}}}
-{{{
 settings.set(ClassAttribute.HEALTH, 25, 0.75);
-}}}
 
-{{{
 // Sets the mana of the class. The first number is the mana the class
 // will start with at level 1. The second number is how much mana the class
 // gains per level.
-}}}
-{{{
 settings.set(ClassAttribute.MANA, 15, 0.25);
 }}}
 
@@ -97,46 +87,29 @@ While none of the following are required, they can help you customize your class
 // This will be used for labels such as chat prefixes, scoreboard titles, and the class
 // display next to your name. If all of these are disabled in the config, this prefix will
 // end up not doing anything.
-}}}
-{{{
 setPrefix(String prefix);
-}}}
-{{{
+
 // This is the display name of the class\'s mana. This is used in the stats scoreboard along with
 // messages for when the player is low on mana. This can be used to give unique names to class
 // mana such as "Rage" for a berserker or "Energy" for an engineer. 
-}}}
-{{{
 setManaName(String name);
-}}}
-{{{
+
 // This sets how much mana the class will gain each interval. By default, this will be
 // given once every second, but the "freq" option in the config under "Mana" will let
 // you make this occur more or less often.
-}}}
-{{{
 setManaRegen(double amount);
-}}}
-{{{
+
 // This lets you choose what the class gains experience from. By default, classes receive
 // experience from mobs, quests, and commands. For a full list of options, view the
 // [[http://sucy.co.nf/javadoc/skillapi/?0:0;com.sucy.skill.api.enums:ExpSource|ExpSource enum]]
-}}}
-{{{
 setAllowedExpSources(ExpSource ... sources);
-}}}
 
-{{{
 // This works similar to the previous method, although this only adds one source to the list
 // of allowed ones rather than setting all of them at once.}}}
-{{{
 allowExpSource(ExpSource source);
-}}}
-{{{
+
 // This is the same as the previous method except removes the source from the allowed list
 // instead of adding it.
-}}}
-{{{
 disallowExpSource(ExpSource source);
 }}}
 
