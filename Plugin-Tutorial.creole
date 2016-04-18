@@ -1,0 +1,77 @@
+== Step 1 - Reference SkillAPI
+First thing you should do is reference SkillAPI for your project. There isn\'t a special jar file to do so, just use the latest .jar download from the BukkitDev page or the version you are using on your server. If you don\'t know how to reference a .jar file in your editor, look up a basic tutorial on getting started with development before moving on to using this API.
+
+== Step 2 - plugin.yml
+Inside your plugin.yml, you should add either a depend or softdepend for SkillAPI, depending on what you\'re doing with it. In most cases, you will use depend as your plugin wouldn\'t run without SkillAPI present anyway.
+
+{{{
+depend: [SkillAPI]
+}}}
+
+== Step 3 - Implement SkillPlugin
+Assuming you want to create skills or classes with the API, you will need to implement the SkillPlugin interface with your main plugin class. It will look something like this:
+{{{
+public class MyPlugin extends JavaPlugin implements SkillPlugin
+}}}
+This interface tells SkillAPI what plugins to look for when registering skills and classes. All you need to do now is implement the methods of the interface. They are:
+{{{
+public void registerSkills(SkillAPI api) { }
+public void registerClasses(SkillAPI api) { }
+}}}
+These methods are where you will give SkillAPI your custom skills and classes. You must only add skills in the registerSkills method and only classes in the registerClasses method. Adding them elsewhere will not work. To add a skill or a class, you would use one of these methods via the provided API instance:
+{{{
+// Adds a single skill
+api.addSkill(new MySkill1());
+
+// Adds many skills at once
+// You can add as many as you want in this method
+api.addSkills(
+    new MySkill2(),
+    new MySkill3(),
+    new MySkill4()
+);
+
+// Adds a single class
+api.addClass(new MyClass1());
+
+// Adds many classes at once
+// You can add as many classes as you want in this method
+api.addClasses(
+    new MyClass2(),
+    new MyClass3(),
+    new MyClass4()
+);
+}}}
+== Step 4 - Test! ==
+Once you have your own skills and classes and have added them to the API, you are ready to test them! Compile your plugin and try it out.
+
+=== Example ===
+Here is an example plugin implementation:
+{{{
+import com.sucy.skill.SkillAPI;
+import com.sucy.skill.api.SkillPlugin;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class ExamplePlugin extends JavaPlugin implements SkillPlugin {
+
+    @Override
+    public void registerSkills(SkillAPI skillAPI) {
+
+        skillAPI.addSkills(
+                new ExplosionPotion(),
+                new FlashBang(),
+                new GooeyAdhesive(),
+                new HealthPotion(),
+                new PotionOfSickness(),
+                new Immunity()
+        );
+    }
+
+    @Override
+    public void registerClasses(SkillAPI skillAPI) {
+        skillAPI.addClasses(
+                new Alchemist()
+        );
+    }
+}
+}}}
