@@ -1,0 +1,31 @@
+{{http://people.rit.edu/sms6462/mc/img/titleWide.png|SkillAPI}}
+----
+=== Overview ===
+SkillAPI is a robust RPG plugin, allowing for the creation of custom skills and classes without the need of touching any code. An editor is available for making the process easy, or you can tap into the code API if you want more control.
+=== Supported Servers ===
+Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
+=== Dependencies ===
+* [[MCCore|http://dev.bukkit.org/bukkit-plugins/mccore/]]
+=== Features ===
+| [[Class System|classes]] | An in-depth class system is available for your RPG or minigame server with class progression, race support, and much more |
+| [[Skills|skills]] | Fully customizable skills allow for endless possibilities, featuring a skill tree setup and multiple skill levels |
+| [[Casting Systems|casting]] | Offers a variety of casting systems you can choose between |
+| [[Item Effects|items]] | Can turn lore on items into various requirements or additional effects |
+| [[Attributes|attributes]] | A versatile attributes system (Strength, Dexterity, etc.) you can fully customize |
+| [[Level Up Effects|levelup]] | Level up effects that allow you do do just about anything |
+| [[Class and Skill Editor|editor]] | A robust editor tool allowing you to easily make your own skills and classes without any code |
+| [[SQL Database|database]] | Fully supports saving to an SQL database, allowing for cross-server use |
+| [[Experience Curves|exp]] | Allows for fully custom experience curve formulas so you can control how fast players level |
+| [[Multiworld Support|worlds]] | Can be disabled in any given world or worlds so it doesn't interfere with other game modes |
+
+=== Tutorials ===
+| [[Installation|installation]] | Goes over the initial steps for how to get SkillAPI onto your server |
+| [[Dynamic Tool|dynamic]] | Provides information and examples for using the editor to create your own skills and classes and get them onto your server |
+| [[Code API|code]] | Contains instructions, examples, and useful links for getting into the Java API for the plugin |
+
+=== Useful Links ===
+* [[Spigot Page|https://www.spigotmc.org/resources/skillapi.4824/]]
+* [[Bukkit Page|http://dev.bukkit.org/bukkit-plugins/skillapi/]]
+* [[Dynamic Tool|http://people.rit.edu/sms6462/mc/sapi/]]
+* [[Example Skills|https://skillexamples.herokuapp.com/]]
+* [[Help IRC|https://skillapi.herokuapp.com/]]
