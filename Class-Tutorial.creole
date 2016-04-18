@@ -1,0 +1,196 @@
+== Step 1 - Extend RPGClass ==
+To begin, you need to make a java class that extends RPGClass. This is the base class provided by SkillAPI that acts as a template for a class. Your class should look something like this:
+
+{{{
+public class MyClass1 extends RPGClass
+}}}
+
+== Step 2 - The Constructor ==
+RPGClass provides three different constructors for you to use. What one you use depends on what you want the class to be. The three options are:
+
+{{{
+// This constructor is used to make a starting class of the 
+// default group (which is "class"). This is the simplest to 
+// get started with and will likely be the one you use for your
+// first few classes.
+// The "name" is simply what you want to call the class. It 
+// will be the name of the config file for the class and what 
+// players need to type in to profess as the class.
+// The "icon" is the item that represents the class in menus 
+// such as when choosing a skill tree for one of the players' 
+// professed classes. Currently this isn\'t used unless you 
+// use multiple class groups, but will likely have more use 
+// later on.
+// The "maxLevel" is what level the class can reach. If the 
+// class can profess into a new class, this level will also be 
+// when the player can make the change.
+}}}
+{{{
+RPGClass(String name, ItemStack icon, int maxLevel);
+}}}
+{{{
+// This constructor is used to make professions to your 
+// starting classes within the default group.
+// The "parent" would be the name of the class you want 
+// this class to profess from.
+// For example, if you want a "Fighter" to turn into a 
+// "Warrior", you would make your "Warrior" class with 
+// this constructor and make the parent "Fighter"
+}}}
+{{{
+RPGClass(String name, ItemStack icon, int maxLevel, String parent);
+}}}
+{{{
+// This one is the same as the previous, except it also 
+// lets you specify a class group.
+// The class group would be used to create a new branch 
+// of classes that players can profess into at the same time 
+// as the normal ones. For example, creating a class with the 
+// group "race" would allow players profess into one of the 
+// "race" classes along with one of the regular classes if 
+// you make at least one of each.
+}}}
+{{{
+RPGClass(String name, ItemStack icon, int maxLevel, String group, String parent);
+}}}
+
+== Step 3 - Setting Health and Mana ==
+Next you will want to set the health and mana scaling of the class. This lets you control how much health the class starts with as well as how much it goes up each level. To do so, you would use the following code inside the constructor:
+
+{{{
+// Sets the health of the class. The first number is the health the class
+// will start with at level 1. The second number is how much health the class
+// gains per level. 
+}}}
+{{{
+settings.set(ClassAttribute.HEALTH, 25, 0.75);
+}}}
+
+{{{
+// Sets the mana of the class. The first number is the mana the class
+// will start with at level 1. The second number is how much mana the class
+// gains per level.
+}}}
+{{{
+settings.set(ClassAttribute.MANA, 15, 0.25);
+}}}
+
+== Step 4 - Adding Skills ==
+Classes are going to want to have some skills, and adding them is fairly easy. This will be done in the constructor similar to setting the health and mana. The code to add skills looks like this:
+
+{{{
+// Adds skills to the class. You can enter as many
+// skill names as you want in this method. Any invalid skill
+// names will be removed from the class when you run the plugin.
+addSkills(
+    "MySkill1",
+    "MySkill2",
+    "MySkill3"
+);
+}}}
+
+== Step 5 - Extras ==
+While none of the following are required, they can help you customize your class much more. Here are the available options:
+
+{{{
+// Sets the prefix of the class. This can be as simple as a colored version of the name.
+// This will be used for labels such as chat prefixes, scoreboard titles, and the class
+// display next to your name. If all of these are disabled in the config, this prefix will
+// end up not doing anything.
+}}}
+{{{
+setPrefix(String prefix);
+}}}
+{{{
+// This is the display name of the class\'s mana. This is used in the stats scoreboard along with
+// messages for when the player is low on mana. This can be used to give unique names to class
+// mana such as "Rage" for a berserker or "Energy" for an engineer. 
+}}}
+{{{
+setManaName(String name);
+}}}
+{{{
+// This sets how much mana the class will gain each interval. By default, this will be
+// given once every second, but the "freq" option in the config under "Mana" will let
+// you make this occur more or less often.
+}}}
+{{{
+setManaRegen(double amount);
+}}}
+{{{
+// This lets you choose what the class gains experience from. By default, classes receive
+// experience from mobs, quests, and commands. For a full list of options, view the
+// [[http://sucy.co.nf/javadoc/skillapi/?0:0;com.sucy.skill.api.enums:ExpSource|ExpSource enum]]
+}}}
+{{{
+setAllowedExpSources(ExpSource ... sources);
+}}}
+
+{{{
+// This works similar to the previous method, although this only adds one source to the list
+// of allowed ones rather than setting all of them at once.}}}
+{{{
+allowExpSource(ExpSource source);
+}}}
+{{{
+// This is the same as the previous method except removes the source from the allowed list
+// instead of adding it.
+}}}
+{{{
+disallowExpSource(ExpSource source);
+}}}
+
+== Step 6 - Events ==
+If you need to use events in your class, you just need to implement Bukkit\'s Listener class and SkillAPI will automatically handle registering your EventHandler methods.
+
+== Example Class ==
+Here\'s an example class using all of the available features:
+{{{
+import com.sucy.skill.api.classes.ClassAttribute;
+import com.sucy.skill.api.classes.RPGClass;
+import com.sucy.skill.api.enums.ExpSource;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
+
+public class Alchemist extends RPGClass {
+    
+    // You can set up the icon with descriptive text as well
+    private static final ItemStack ICON = new ItemStack(Material.POTION) {{
+        ItemMeta meta = ICON.getItemMeta();
+        meta.setDisplayName(ChatColor.GOLD + "Alchemist");
+        meta.setLore(new ArrayList() {{
+            add("");
+            add(ChatColor.GRAY + "A hybrid between offense");
+            add(ChatColor.GRAY + "and support, the alchemist");
+            add(ChatColor.GRAY + "uses potions to apply AOE");
+            add(ChatColor.GRAY + "debilitation and healing.");
+        }});
+        setItemMeta(meta);
+    }};
+
+    public Alchemist() {
+        super("Alchemist", ICON, 40);
+
+        settings.set(ClassAttribute.HEALTH, 25.375, 0.375);
+        settings.set(ClassAttribute.MANA, 100, 0);
+
+        setPrefix(ChatColor.GOLD + "Alchemist");
+        setManaName("Alchemy");
+        setManaRegen(2);
+        setAllowedExpSources(ExpSource.MOB, ExpSource.QUEST, ExpSource.COMMAND);
+
+        addSkills(
+                "Explosion Potion",
+                "Flash Bang",
+                "Gooey Adhesive",
+                "Health Potion",
+                "Potion of Sickness",
+                "Immunity"
+        );
+    }
+}
+}}}
