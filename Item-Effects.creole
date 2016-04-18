@@ -1,0 +1,21 @@
+== Enabling Effects ==
+Item requirements and bonus attributes are disabled by default. To enable them, open the config.yml and enable the ones you want under "Items". "lore-requirements" is needed for the others to work, even when they are enabled.
+
+== Requirements ==
+Items can be given requirements to be used when enabled in the config. Available requirements are:
+| Class Req: {class} | Requires the specified class to use the item |
+| Class Req: {class1}, {class2} | Requires any of the specified classes to use the item |
+| Excluded Class: {class} | Requires the player to not be the specified class to use the item |
+| Level Req: {level} | Requires the player to be at least the given level to use the item |
+| Requires {skill}: {level} | Requires a skill to have a certain rank before using the item |
+| {attr} Req: {amount} | Requires a player to have enough attribute points to use the item |
+
+== Attribute Bonuses ==
+Items can provide bonus stats to players when enabled through the attributes system. The format looks like this by default:
+
+{{{ {attr}: {amount} }}}
+
+Where {attr} is the type of attribute being given and {amount} is how many to give.
+
+== Customizing Formats ==
+To change any of the above formats, open the config.yml and change the options in the "Items" section.
