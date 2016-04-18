@@ -1,0 +1,24 @@
+Equipment requirements only work on armor before version 2.21. 
+With version 2.21, weapons now work as well, making items that don't meet the requirements deal 1 damage. 
+
+They work by checking the item's details when equipped and if the requirement is not met, the item is removed if it is armor or deals 1 damage if it is a held item. The requirements are stored in the item's lore so there are many plugins that can create items with the requirements. You can add color to the lore along with the requirements in order to give it the look that you want as well. 
+
+{{{http://dev.bukkit.org/media/images/66/189/requirementFail.png|When a requirement is not met}}}
+
+Each of the requirements listed below can be used together to create any restrictions you want. 
+
+Here are a few of the possible requirements:
+
+== Class Req: <className> ==
+
+This requirement checks if the player is the provided class or one of it's professions. For example, if the lore is "Class Req: Fighter" and then a Berserker professes from a fighter, a player who is a berserker or a fighter can use the item, but a mage cannot. You can have multiple class requirements to allow multiple classes to use the item. An example of this is requiring a mage and a fighter, so that fighters and mages can both use the item.
+
+== Excluded Class: <className> ==
+
+This requirement checks to make sure the player is not the provided class or one of its professions. For example, if the lore is "Exclude Class: Fighter" and a Berserker professes from a fighter, a player who is a berserker or a fighter cannot use the item, but a mage can. You can have multiple of these in order to prevent multiple classes from using the item.
+
+== Level Req: <level> ==
+
+This requirement checks if the player is at least a certain level. If there are multiple of these on a single item, the highest level requirement will apply. This is based on the player's class level, not their enchanting level. 
+
+{{{http://dev.bukkit.org/media/images/66/188/levelReq.png|Level requirement example}}}
