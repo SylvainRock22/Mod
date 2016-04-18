@@ -12,6 +12,13 @@ This is the main config file for attributes. You can completely customize them, 
 * What dynamic skill settings they affect
 * The stats they effect
 
+== Default Attributes ==
+ | Vitality       | +1 HP                    |
+ | Spirit         | +1 Mana and +2.5% Regen  |
+ | Intelligence   | +2.5% Skill Damage       |
+ | Strength       | +2.5% Physical Damage    |
+ | Dexterity      | +2.5% Skill Range        |
+
 == Stat Modifiers ==
 Attributes can directly modify certain stats. The format for these is the following:
 
