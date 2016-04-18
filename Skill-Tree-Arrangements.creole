@@ -1,0 +1,45 @@
+== Quick List ==
+* BasicHorizontal
+* BasicVertical
+* LevelHorizontal
+* LevelVertical
+* Requirement
+
+== Requirement Tree ==
+{{{
+Key: Requirement
+}}}
+{{http://dev.bukkit.org/thumbman/images/64/755/600x401/requirementTree.jpg.-m1.png|Requirement Tree Controller}}
+
+This is the default arrangement that helps display skill chains while not having its available space exhausted by unchained skills. It is best for classes that do not have complicated skill requirement chains. The best results are when no skills are required by more than 2 skills. 
+
+The key for this tree in the config is "RequirementTree" (or just any invalid name since it defaults to this) 
+
+A requirement tree takes any skills not related to any others and puts them on the left hand side in ascending level requirement order. It uses up only the number of columns it needs to (3 are shown in the above diagram but generally it will be less than that). 
+
+The rest are arranged in their chain order on the right hand side, starting with the skills that don't require other skills but are required by others. These use the rest of the columns in the grid except the one column spacing between the unchained and chained skills. For example, if you have a skill chain of Punch > Kick > Throw, punch would be along the top with Kick right below Punch and then Throw right below Kick. If there are multiple skills that require the same one, the second shifts everything else in that tier to the right so it can fit. If there are too many skills in one tier, it will wrap onto the next row and lower how many tiers you can have by one as a result. 
+
+== Level Horizontal Tree ==
+This tree arranges skills by their initial level requirement. It takes the maximum level requirement, and breaks up each column into level ranges. Skills are placed into the tiers and then arranged in those tiers depending on where their required skills are in previous tiers. 
+
+While this structure tends to allow for many more skills with a less organized arrangement, having too many skills in one of the last tiers can cause it to overflow fairly easily. Due to this, this arrangement is better for skill systems with fairly evenly distributed skills level-wise without too much branching. 
+
+== Level Vertical Tree ==
+This arrangement is essentially the same as the Level Horizontal Tree except arranged vertically instead of horizontally. This change reduces the amount of level tiers and increases the amount of skills that can fit into each one. This would be better for skill systems with lower maximum required levels. 
+
+== Basic Horizontal Tree ==
+{{{
+Key: BasicHorizontal 
+}}}
+{{http://dev.bukkit.org/thumbman/images/64/756/600x401/basicHorizontalTree.jpg.-m1.png|Basic Horizontal Tree Arrangement}}
+
+This is the old arrangement for the plugin which is for displaying skill requirement chains. It can run out of room quickly when there are unchained skills or skills that are required by more than one skill. This tree works best when there's a few base chain skills with only one skill that requires any other skill. 
+
+This tree arranges skills by their requirements, strictly aligning them to the right of what they require. If there are multiple skills that require the same one, the additional ones will reserve their own row in the skill tree (which uses up the space very fast). This tree should likely not commonly be used unless you have long skill requirement chains that don't branch out into multiple skills on any given tier or you prefer the more organized structure of it with a fewer number of skills. 
+
+
+== Basic Vertical Tree ==
+{{{
+Key: BasicVertical 
+}}}
+This tree is very similar to the basic horizontal tree, just laid vertically instead of horizontally. This change increases the amount of branching you can do, but reduces the amount of tiers that you can have.
