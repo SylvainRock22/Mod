@@ -12,7 +12,8 @@ Usage:
 # right click to cast a skill assigned to the held item
 
 == Skill Bar ==
-A detailed description can be found here 
+
+{{{http://dev.bukkit.org/bukkit-plugins/skillapi/pages/skill-casting/skill-bar/|A detailed description can be found here}}} 
 
 Turns your quick bar into a skill bar for easy casting of many skills 
 This must be enabled in the config via the option "use-skill-bars" 
