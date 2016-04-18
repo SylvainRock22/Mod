@@ -1,0 +1,17 @@
+With the API, players are able to unlock skills using visual skill trees. These consist of custom inventories that contain several items, one for each available skill, that each show a detailed description of the skill they represent. Each skill can customize what attributes are shown on the item, the description for the skill, the type of the skill, and what item represents it. 
+
+Item amounts also quickly represent how many levels you have invested in that skill! 
+
+The trees can be arranged in multiple ways. For a list of available arrangements, view the details here: https://github.com/Eniripsa96/SkillAPI/wiki/Skill-Tree-Arrangements
+
+{{http://dev.bukkit.org/media/images/66/221/visualTree.png|Visual Skill Tree}}
+
+Players can do one of two things with each skill:
+* Left Click - Levels up the skill if they meet the requirements, using up skill points in the process
+* Right Click - Undoes a level in the skill, refunding the skill points and deleveling it if they have any levels in the skill
+
+Skills also allow you to see what the skill's stats will be on future levels. Before you invest any points in the skill, it shows the level 1 stats. Once you upgrade it, it then shows your current level's stats compared to the next level's stats. 
+
+{{http://dev.bukkit.org/media/images/66/222/leveledSkill.png|A leveled up skill}}
+
+This visual system allows players to see what they can get and makes it very simple for new players to get into the skill system!
