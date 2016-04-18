@@ -1,0 +1,3 @@
+{{http://dev.bukkit.org/thumbman/images/66/231/600x36/chatPrefix.png.-m1.png|Chat Prefix}}
+
+When enabled, players will receive chat prefixes with their class once they profess into it. The colors and exact text are configurable and can be set up in code or with the external tool. this provides a little aesthetic element to the API.
