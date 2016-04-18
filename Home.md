@@ -1,7 +1,5 @@
 **Overview**
-
 ***
-
 SkillAPI is a powerful Minecraft plugin that allows you to create custom classes and abilities for your server. SkillAPI also offers an extensive online skill editor creating abilities without any programming knowledge.
 
 **Features**
