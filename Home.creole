@@ -13,7 +13,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 === Features ===
 | [[Classes|Classes]] | An in-depth class system is available for your RPG or minigame server with class progression, race support, and much more |
 | [[Skills|Skills]] | Fully customizable skills allow for endless possibilities, featuring a skill tree setup and multiple skill levels |
-| [[Casting Systems|Casting]] | Offers a variety of casting systems you can choose between |
+| [[Casting Systems|Skill Casting]] | Offers a variety of casting systems you can choose between |
 | [[Item Effects|Items]] | Can turn lore on items into various requirements or additional effects |
 | [[Attributes|Attributes]] | A versatile attributes system (Strength, Dexterity, etc.) you can fully customize |
 | [[Level Up Effects|Level Up]] | Level up effects that allow you do do just about anything |
