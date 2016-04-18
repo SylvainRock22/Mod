@@ -9,6 +9,9 @@ Classes are able to progress into subclasses. Setting the "parent" of a class cr
 == Class Skills == 
 Each class can have its own set of skills at its disposal. This can include passives and active abilities. Passive abilities can also allow you to create class perks such as bonus damage with weapons, or other fun mechanics.
 
+== Races, Teams, and other Groups ==
+Classes have a "group" option which can allow you to create multiple class groups, such as races, teams, or other categories you can think of. Each group can be professed into separately, and can only have one class from each group. Each group can add stats and skills to each other for diverse options for players.
+
 == Switching Classes ==
 
 The "/class acc <accountId>" command allows players to swap between classes while preserving their old ones.
