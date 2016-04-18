@@ -1,4 +1,4 @@
-****Will SkillAPI and MCCore be ported to Sponge?****
+**Will SkillAPI and MCCore be ported to Sponge?**
 Yes, Sponge support for both are planned.
 
 ****Some of SkillAPI's features aren't working / SkillAPI isn't working at all!****
