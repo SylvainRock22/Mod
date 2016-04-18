@@ -1,0 +1,13 @@
+Skill bars are a new way to cast skills added in v2.7. These bring traditional RPG skill bars into Minecraft! When first using the skill bars, you will get a quick bar with a bunch of seeds in it that represent unassigned skill slots. 
+
+{{http://dev.bukkit.org/media/images/68/6/skillBar.png|Empty Skill Bar}}
+
+Players can assign skills to the bar by hovering over a skill in their skill tree and pressing the number key for the slot to assign it to. The assigned skills will have their icon with their full description placed in the slot so that players can easily tell which one is which. Once the skill is assigned, pressing the same number key while not in an inventory will cast the skill. 
+
+{{http://dev.bukkit.org/media/images/68/8/skillTree.png|Skill tree interaction}}
+
+Players can change the slots used for skills by simply right clicking them. Right clicking a skill slot will remove the indicator and allow items to be placed into it while right clicking a normal slot will move the item from it and turn the slot into a skill slot. 
+
+{{http://dev.bukkit.org/media/images/68/7/changedSkillBar.png|Changed skill bar}}
+
+If the bar is ever in the way (like if you want to go build something), there's also the "/class bar" command to disable it until you use the command again (all skill slots return to normal as if the feature was never there). Also, when you switch to creative mode the skill bar is automatically disabled. Your skill setup is saved even when the skill bar is disabled however.
