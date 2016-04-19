@@ -1,0 +1,13 @@
+== Setting up SQL Integration ==
+To set up and enable SQL Database saving, open up the config.yml and find the "Saving" section. Set "sql-database" to true, and fill out the "sql-details" with your database's information.
+
+== Schema ==
+For those planning on reading data from the database for a website or similar function, the schema used by SkillAPI is a lazy schema with 3 columns:
+| Name | The player's UUID |
+| id | Increment index of the entry |
+| data | The YAML data for the player |
+
+== Parsing YAML ==
+If you need to parse the YAML data for a website, you could use the JavaScript YAML parser made for the Dynamic Editor. The source for that can be found here:
+
+[[JavaScript YAML Parser Source|https://github.com/Eniripsa96/SkillAPI-Dynamic-Editor/blob/master/js/yaml.js]]
