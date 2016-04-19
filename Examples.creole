@@ -1,3 +1,8 @@
+== Examples Database ==
+The examples database can be found here:
+
+[[https://skillexamples.herokuapp.com/]]
+
 == Dynamic Examples: ==
 * [[Alchemist|_Example Alchemist]]
 * [[Bard|_Example Bard]]
