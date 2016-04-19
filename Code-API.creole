@@ -7,6 +7,6 @@ SkillAPI offers a simple way to tap into the code and start making your own skil
 
 == Tutorials ==
 Examples are provided at the end of each tutorial.
-* [[Skills|Tutorial Coding Skills]]
-* [[Classes|Tutorial Coding Classes]]
-* [[Plugins|Tutorial Coding Plugins]]
+* [[Skills|_Tutorial Coding Skills]]
+* [[Classes|_Tutorial Coding Classes]]
+* [[Plugins|_Tutorial Coding Plugins]]
