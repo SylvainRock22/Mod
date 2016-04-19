@@ -2,6 +2,6 @@
 
 When enabled, players will receive chat prefixes with their class once they profess into it. The colors and exact text are configurable and can be set up in code or with the external tool. this provides a little aesthetic element to the API.
 
-=== Plugin Compatibility ===
+== Plugin Compatibility ==
 
 Any other chat plugins will not be compatible with this feature. If you are using one, you should keep this disabled.
