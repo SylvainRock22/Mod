@@ -1,0 +1,19 @@
+== Overview ==
+The amount of experience required to level up is controlled by a configurable formula. This is found in the config.yml under "Experience".
+
+== Default Formula ==
+The default formula set up is the following:
+
+{{{(x * lvl^2) + (y * lvl) + z}}}
+
+Where x, y, and z are values from the config. To view how turns into numbers each level, visit the tool here:
+
+[[Exp Formula Tool|https://people.rit.edu/sms6462/mc/exp]]
+
+== Custom Formulas ==
+You can enable and make up your own formula as well. To do so, enable the "use-custom" under "Experience" in the config.yml file and then change "custom-formula" to whatever you want it to be.
+
+== Formulas ==
+For details on how formulas work, see this page:
+
+[[Formula Details|_SkillAPI Formulas]]
