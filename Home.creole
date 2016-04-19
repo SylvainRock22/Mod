@@ -23,6 +23,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 | [[Multiworld Support|Worlds]] | Can be disabled in any given world or worlds so it doesn't interfere with other game modes |
 | [[Custom Statuses|Custom Statuses]] | Stuns, roots, silences, and more are provided by the plugin |
 | [[Chat Prefixes|Chat Prefixes]] | Add colorful names reflecting players' professed classes |
+| __________________
 
 === Tutorials ===
 | [[Installation|Installation]] | Goes over the initial steps for how to get SkillAPI onto your server |
