@@ -1,0 +1,26 @@
+== Step 1 - Download ==
+SkillAPI and it's dependency MCCore are both readily available through BukkitDev. The latest versions support many server versions, so regardless of what server you are running, you will want the latest build. You can download the latest SkillAPI and MCCore. They can be found here:
+
+* [[SkillAPI|http://dev.bukkit.org/bukkit-plugins/skillapi/files/]]
+* [[MCCore|http://dev.bukkit.org/bukkit-plugins/mccore/files/]]
+
+== Step 2 - Install ==
+Installing SkillAPI is the same as any other plugin, just add it to your server's plugin folder along with MCCore. The first time you run the server will generate all of the config files and folders needed.
+
+== Step 3 - Configuration ==
+There is a large amount of available configuration available. Each file has commented options so you can easily read through them to see what you can change. Most major features are disabled by default to make the plugin as lightweight as possible, so you should look through them to see what you want enabled. The available files are:
+
+| config.yml     | the main config file with general plugin settings (START HERE)
+| attributes.yml | can customize attributes, including effects and names
+| commands.yml   | can enable/disable commands and change messages or what to type
+| groups.yml     | has class options such as exp lost on death, mana regen, and profess options
+| language.yml   | contains most messages sent to players
+| schemes.yml    | has settings for map menus such as used fonts
+
+== Step 4 - Making Skills and Classes ==
+Once you have the plugin set up, it's time to make your own skills and classes or [[choose examples|https://github.com/Eniripsa96/SkillAPI/wiki/Examples]] to use. Developers can create them using the Code API and non-developers can use the Dynamic Tool. You can find tutorials for either of these methods here:
+
+* [[Dynamic Tool|Dynamic Tool]]
+* [[Code API|Code API]]
+        
+        
