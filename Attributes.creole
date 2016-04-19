@@ -57,18 +57,9 @@ You can add multiple statements as well to target different groups. This example
 {{{Damage-value: 'a*0.05+1*v:icon-key=example|a*0.02+1*v'}}}
 
 == Formulas ==
-The supported operations are:
+For details on how formulas work, see this page:
 
-* Addition ( + )
-* Subtraction ( - )
-* Multiplication ( * )
-* Division ( / )
-* Exponent ( ^ )
-
-PEMADS rules do not apply to these formulas. They are read from left to right other than parenthesis. For an example of operator precedence, the following equations are identical and equate to 0:
-
-{{{2-5*4+2(5+1)^2}}}
-{{{((2-5)*4+2(5+1))^2}}}
+[[Formula Details|_SkillAPI Formulas]]
 
 == Formula Examples ==
 === Flat Change ===
