@@ -2,7 +2,9 @@ With the API, players are able to unlock skills using visual skill trees. These 
 
 Item amounts also quickly represent how many levels you have invested in that skill! 
 
-The trees can be arranged in multiple ways. For a list of available arrangements, view the details here: https://github.com/Eniripsa96/SkillAPI/wiki/Skill-Tree-Arrangements
+The trees can be arranged in multiple ways. For a list of available arrangements, view the details here:
+
+[[Skill Tree Arrangements|_Skill Tree Arrangements]]
 
 {{http://dev.bukkit.org/media/images/66/221/visualTree.png|Visual Skill Tree}}
 
