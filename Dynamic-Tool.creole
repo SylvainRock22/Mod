@@ -20,9 +20,9 @@ You can find the editor here:
 == Complete Reference ==
 
 === Triggers ===
-| [[Cast|_Trigger Cast]] | [[Cleanup|_Trigger Cleanup]] | [[Crouch|_Trigger Crouch]] | [[Death|_Trigger Death]] | [[Initialize|_Trigger Initialize]] |
-| [[Kill|_Trigger Kill]] | [[Land|_Trigger Land]] | [[Launch|_Trigger Launch]] | [[Physical Damage|_Trigger Physical Damage]] | [[Skill Damage|_Trigger Skill Damage]] |
-| [[Took Physical Damage|_Trigger Took Physical Damage]] | [[Took Skill Damage|_Trigger Took Skill Damage]] |
+| [[Cast|_Trigger Cast]] | [[Cleanup|_Trigger Cleanup]] | [[Crouch|_Trigger Crouch]] | [[Death|_Trigger Death]] | 
+| [[Initialize|_Trigger Initialize]] | [[Kill|_Trigger Kill]] | [[Land|_Trigger Land]] | [[Launch|_Trigger Launch]] | 
+| [[Physical Damage|_Trigger Physical Damage]] | [[Skill Damage|_Trigger Skill Damage]] | [[Took Physical Damage|_Trigger Took Physical Damage]] | [[Took Skill Damage|_Trigger Took Skill Damage]] |
 
 === Targets ===
 | [[Area|_Target Area]] | [[Cone|_Target Cone]] | [[Linear|_Target Linear]] | [[Location|_Target Location]] | [[Nearest|_Target Nearest]] |
