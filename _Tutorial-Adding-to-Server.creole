@@ -1,0 +1,17 @@
+== Adding a single skill ==
+| {{https://people.rit.edu/sms6462/mc/help/img/saveSkill.png}} | Click on the "Save" button in the skill effect editor. This will download the .yml file for you. |
+| {{https://people.rit.edu/sms6462/mc/help/img/copySkill.png}} | Now just place that .yml file into the folder at \\{{{plugins > SkillAPI > dynamic > skill}}} \\ See the image to the left for an example. 
+| _______________________________ 
+
+== Adding a single class ==
+| {{https://people.rit.edu/sms6462/mc/help/img/saveClass.png}} | Click on the "Save" button at the bottom when editing the class. This will download the .yml for you. |
+| {{https://people.rit.edu/sms6462/mc/help/img/copyClass.png}} | Now just place that .yml file into the folder at \\{{{plugins > SkillAPI > dynamic > class}}} \\ See the image to the left for an example.  |
+| _______________________________
+
+== Adding all at once ==
+| {{https://people.rit.edu/sms6462/mc/help/img/saveAll.png}} | Click on the "Save" button at the top right of the editor. This will give you two .yml files that contain the data for all skills and classes you've made. |
+| {{https://people.rit.edu/sms6462/mc/help/img/copyAll.png}} | Now just place both .yml files into the folder at \\{{{plugins > SkillAPI > dynamic}}} \\ See the image to the left for an example. Overwrite existing files and make sure the names are correct. |
+| _______________________________
+
+== Run the server ==
+Once you've done one of the above methods, run your server and the files you copied over should load in and be available to use!
