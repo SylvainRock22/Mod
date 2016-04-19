@@ -26,14 +26,14 @@ Attributes can directly modify certain stats. The format for these is the follow
 
 The <stat> part is the stat to modify, which can be one of these stats:
 
-| health | The max health of a player |
-| mana | The max health of a player |
-| mana-regen | The max health of a player |
-| physical-damage | The max health of a player |
-| physical-defense | The max health of a player |
-| skill-damage | The max health of a player |
-| skill-defense | The max health of a player |
-| move-speed | The max health of a player |
+| health | The max health of the player |
+| mana | The max mana of the player |
+| mana-regen | The amount of mana regeneration the player has |
+| physical-damage | The amount of damage done by physical (basic or projectile) attacks |
+| physical-defense | The amount of damage taken by physical (basic or projectile) attacks |
+| skill-damage | The amount of damage done by skills |
+| skill-defense | The amount of damage taken by skills |
+| move-speed | The movement speed of the player |
 
 == Dynamic Settings ==
 Attributes can modify the settings for dynamic skills. They are organized by their category (Mechanic, Target, or Condition) and have the following format:
