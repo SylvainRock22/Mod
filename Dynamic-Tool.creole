@@ -1,0 +1,51 @@
+== Accessing the Editor ==
+You can find the editor here:
+
+[[Dynamic Tool|http://people.rit.edu/sms6462/mc/sapi/]]
+
+== Things to Know ==
+| {{https://people.rit.edu/sms6462/mc/help/img/tooltip.png}} | Hovering over any option's label provides you with an explanatory bit of text. |
+| {{https://people.rit.edu/sms6462/mc/help/img/attribute.png}} | Options that look like this are a base number followed by the additional amount per level. Negatives work for both boxes. |
+| {{https://people.rit.edu/sms6462/mc/help/img/import.png}} | You can drop .yml files you've made before (or examples you've found) anywhere in the tool and it will let you edit them. |
+| {{https://people.rit.edu/sms6462/mc/help/img/dragDrop.png}} | Skill effects and be dragged and dropped onto others to change how things are structured. |
+
+== Tutorial Topics ==
+* [[Skill Basics|_Tutorial Skill Basics]]
+* [[Class Basics|_Tutorial Class Basics]]
+* [[Adding to Server|_Tutorial Adding to Server]]
+* [[Advanced - Targeting|_Tutorial Advanced Targeting]]
+* [[Advanced - Flags|_Tutorial Advanced Flags]]
+* [[Advanced - Values|_Tutorial Advanced Values]]
+
+== Complete Reference ==
+
+=== Triggers ===
+| [[Cast|_Trigger Cast]] | [[Cleanup|_Trigger Cleanup]] | [[Crouch|_Trigger Crouch]] | [[Death|_Trigger Death]] | [[Initialize|_Trigger Initialize]] |
+| [[Kill|_Trigger Kill]] | [[Land|_Trigger Land]] | [[Launch|_Trigger Launch]] | [[Physical Damage|_Trigger Physical Damage]] | [[Skill Damage|_Trigger Skill Damage]] |
+| [[Took Physical Damage|_Trigger Took Physical Damage]] | [[Took Skill Damage|_Trigger Took Skill Damage]] |
+
+=== Targets ===
+| [[Area|_Target Area]] | [[Cone|_Target Cone]] | [[Linear|_Target Linear]] | [[Location|_Target Location]] | [[Nearest|_Target Nearest]] |
+| [[Offset|_Target Offset]] | [[Remember|_Target Remember]] | [[Self|_Target Self]] | [[Single|_Target Single]] |
+
+=== Conditions ===
+| [[Armor|_Condition Armor]] | [[Attribute|_Condition Attribute]] | [[Biome|_Condition Biome]] | [[Block|_Condition Block]] | [[Chance|_Condition Chance]] |
+| [[Class|_Condition Class]] | [[Class Level|_Condition Class Level]] | [[Combat|_Condition Combat]] | [[Direction|_Condition Direction]] | [[Elevation|_Condition Elevation]] |
+| [[Fire|_Condition Fire]] | [[Flag|_Condition Flag]] | [[Health|_Condition Health]] | [[Inventory|_Condition Inventory]] | [[Item|_Condition Item]] |
+| [[Light|_Condition Light]] | [[Mana|_Condition Mana]] | [[Name|_Condition Name]] | [[Offhand|_Condition Offhand]] | [[Potion|_Condition Potion]] |
+| [[Skill Level|_Condition Skill Level]] | [[Status|_Condition Status]] | [[Time|_Condition Time]] | [[Tool|_Condition Tool]] | [[Value|_Condition Value]] |
+| [[Water|_Condition Water]] |
+
+=== Mechanics ===
+| [[Attribute|_Mechanic Attribute]] | [[Block|_Mechanic Block]] | [[Cancel|_Mechanic Cancel]] | [[Channel|_Mechanic Channel]] | [[Cleanse|_Mechanic Cleanse]] | 
+| [[Command|_Mechanic Command]] | [[Cooldown|_Mechanic Cooldown]] | [[Damage|_Mechanic Damage]] | [[Damage Buff|_Mechanic Damage Buff]] | [[Damage Lore|_Mechanic Damage Lore]] | 
+| [[Defense Buff|_Mechanic Defense Buff]] | [[Delay|_Mechanic Delay]] | [[Disguise|_Mechanic Disguise]] | [[Explosion|_Mechanic Explosion]] | [[Fire|_Mechanic Fire]] | 
+| [[Flag|_Mechanic Flag]] | [[Flag Clear|_Mechanic Flag Clear]] | [[Flag Toggle|_Mechanic Flag Toggle]] | [[Heal|_Mechanic Heal]] | [[Immunity|_Mechanic Immunity]] | 
+| [[Interrupt|_Mechanic Interrupt]] | [[Item|_Mechanic Item]] | [[Item Projectile|_Mechanic Item Projectile]] | [[Item Remove|_Mechanic Item Remove]] | [[Launch|_Mechanic Launch]] | 
+| [[Lightning|_Mechanic Lightning]] | [[Mana|_Mechanic Mana]] | [[Message|_Mechanic Message]] | [[Particle|_Mechanic Particle]] | [[Particle Animation|_Mechanic Particle Animation]] | 
+| [[Particle Projectile|_Mechanic Particle Projectile]] | [[Passive|_Mechanic Passive]] | [[Permission|_Mechanic Permission]] | [[Potion|_Mechanic Potion]] | [[Potion Projectile|_Mechanic Potion Projectile]] | 
+| [[Projectile|_Mechanic Projectile]] | [[Purge|_Mechanic Purge]] | [[Push|_Mechanic Push]] | [[Remember Targets|_Mechanic Remember Targets]] | [[Repeat|_Mechanic Repeat]] | 
+| [[Sound|_Mechanic Sound]] | [[Speed|_Mechanic Speed]] | [[Status|_Mechanic Status]] | [[Taunt|_Mechanic Taunt]] | [[Value Add|_Mechanic Value Add]] | 
+| [[Value Attribute|_Mechanic Value Attribute]] | [[Value Location|_Mechanic Value Location]] | [[Value Lore|_Mechanic Value Lore]] | [[Value Multiply|_Mechanic Value Multiply]] | [[Value Random|_Mechanic Value Random]] | 
+| [[Value Set|_Mechanic Value Set]] | [[Warp|_Mechanic Warp]] | [[Warp Location|_Mechanic Warp Location]] | [[Warp Random|_Mechanic Warp Random]] | [[Warp Swap|_Mechanic Warp Swap]] | 
+| [[Warp Target|_Mechanic Warp Target]] | [[Warp Value|_Mechanic Warp Value]] | [[Wolf|_Mechanic Wolf]] | 
