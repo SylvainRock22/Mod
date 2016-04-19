@@ -13,7 +13,7 @@ Usage:
 
 == Skill Bar ==
 
-A detailed description can be found here: [[Skill Bar]]
+A detailed description can be found here: [[Skill Bar|_Skill Bar]]
 
 Turns your quick bar into a skill bar for easy casting of many skills 
 This must be enabled in the config via the option "use-skill-bars" 
