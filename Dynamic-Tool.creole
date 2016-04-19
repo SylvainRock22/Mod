@@ -5,7 +5,7 @@ You can find the editor here:
 
 == Things to Know ==
 | {{https://people.rit.edu/sms6462/mc/help/img/tooltip.png}} | Hovering over any option's label provides you with an explanatory bit of text. |
-| {{https://people.rit.edu/sms6462/mc/help/img/attribute.png}} | Options that look like this are a base number followed by the additional amount per level. Negatives work for both boxes. |
+| {{https://people.rit.edu/sms6462/mc/help/img/attribute.png}} | Options that look like this are a base number followed by the additional amount per level. Negatives and decimals work for both boxes. |
 | {{https://people.rit.edu/sms6462/mc/help/img/import.png}} | You can drop .yml files you've made before (or examples you've found) anywhere in the tool and it will let you edit them. |
 | {{https://people.rit.edu/sms6462/mc/help/img/dragDrop.png}} | Skill effects and be dragged and dropped onto others to change how things are structured. |
 | _______________________________ 
