@@ -1,0 +1,11 @@
+== How to use ==
+In the config.yml, there's the option "level-up-skill" under "Classes". By default, this is set to "lvlup" and refers to the name of a skill to essentially cast when a player levels up. With this, you can make any skill, and tie all those available effects to a level up.
+
+== Skill Details ==
+The skill activated by the level up effect doesn't show a message for the player casting a skill and it is activated with a skill level matching the player's class level.
+
+== Dynamic Skills ==
+There's no restrictions for the level up skill effects other than only the "Cast" trigger will be used, so all of your effects must be under the "Cast" trigger.
+
+== Coded Skills ==
+For skills made via code, you should use the SkillShot interface, allowing the effect to go off at any point.
