@@ -1,0 +1,12 @@
+== Your first Skill ==
+| {{https://people.rit.edu/sms6462/mc/help/img/skill.png}} | When making a new skill, you'll see the "Skill Details" section where you change general information and attributes for the skill. |
+| {{https://people.rit.edu/sms6462/mc/help/img/done.png}} | After you're done with the details, scroll all the way down and click on the "Done" button to start giving it actual effects. |
+| {{https://people.rit.edu/sms6462/mc/help/img/trigger.png}} | Click on the "Triggers" button to choose how your skill will activate. You should probably choose "Cast" for your first skill as that makes the skill work when a player casts the skill. |
+| {{https://people.rit.edu/sms6462/mc/help/img/child.png}} | Now click on "Add Child" on the Trigger that you added. This brings up all available effects you can do. |
+| {{https://people.rit.edu/sms6462/mc/help/img/skillSetup.png}} | Try adding the "Single" target type and then add a "Damage" mechanic to that. This will give you a targeted damaging skill. It should look like the image to the left. |
+
+== Making more Skills ==
+To make more skills, just click "+ New Skill" on the left side of the screen.
+
+== More Complex Effects ==
+For more complex effects, read the [[other tutorials|https://github.com/Eniripsa96/SkillAPI/wiki/Dynamic-Tool#complete-reference]] and check out the [[complete reference|https://github.com/Eniripsa96/SkillAPI/wiki/Dynamic-Tool#complete-reference]] that has descriptions and examples of each available component.
