@@ -29,6 +29,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 | [[Installation|Installation]] | Goes over the initial steps for how to get SkillAPI onto your server |
 | [[Dynamic Tool|Dynamic Tool]] | Provides information and examples for using the editor to create your own skills and classes and get them onto your server |
 | [[Code API|Code API]] | Contains instructions, examples, and useful links for getting into the Java API for the plugin |
+| ____________
 
 === Useful Links ===
 * [[Spigot Page|https://www.spigotmc.org/resources/skillapi.4824/]]
