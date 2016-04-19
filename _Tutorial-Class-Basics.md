@@ -1,5 +1,5 @@
 <img align="left" src="https://people.rit.edu/sms6462/mc/help/img/class.png"> When making a new class, you'll see the "Class Details" section where you can set up any available aspects of the class.
-<br><br><br><br>
+<br><br><br><br><br>
 
 <img align="left" src="https://people.rit.edu/sms6462/mc/help/img/parent.png"> One major option is "Parent". This lets you set up class progression such as a Fighter turning into a Knight. To do so, when making the Knight, you would set its parent as Fighter.
 <br><br><br><br>
