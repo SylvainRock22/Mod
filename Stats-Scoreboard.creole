@@ -1,3 +1,9 @@
+== Overview ==
+
 {{http://dev.bukkit.org/media/images/63/360/PlayerStats.png|Stats Scoreboard}}
 
 When enabled, a scoreboard will appear on the right hand side of the screen displaying a player's stats including their health, mana, skill points, level, and experience. The text on the scoreboard is configurable as well in case you want to change how it looks.
+
+== Plugin Compatibility ==
+
+Other plugins that use scoreboards, namely health bar plugins, tab list displays, or side board displays, will conflict with this feature. If you are using one of those kinds of plugins, this feature should remain disabled.
