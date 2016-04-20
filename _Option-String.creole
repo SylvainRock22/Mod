@@ -7,4 +7,4 @@ A single text box
 {{https://people.rit.edu/sms6462/mc/img/stringOption.png}}
 
 === Details ===
-* If a "Regex" option is also present, the text is treated as a [[regular expression|https://en.wikipedia.org/wiki/Regular_expression]]
+* If a "Regex" option is also present and set to true, the text is treated as a [[regular expression|https://en.wikipedia.org/wiki/Regular_expression]]
