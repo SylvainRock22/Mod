@@ -1,0 +1,10 @@
+== Default Target ==
+With most triggers, the player casting the skill is targeted by default. Due to this, you do not need to use the "Self" target. Exceptions are when the Trigger has an option to make it not target the caster.
+
+== Projectiles ==
+| {{https://people.rit.edu/sms6462/mc/help/img/projectile.png}} | Projectiles fire out from the current target, so you almost always want to be targeting yourself when launching them (unless you're using the "Rain" spread type). |         
+| _______________________________ 
+
+== Direction ==
+All directional effects (ones that use "forward" or other target types like "Single", "Linear", and "Cone") use the direction faced by the current target, caster or not.
+            
