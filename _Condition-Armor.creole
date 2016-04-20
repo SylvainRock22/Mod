@@ -1,0 +1,20 @@
+=== Condition ===
+Child components are applied to each target wearing a piece of armor matching the requirements
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Armor | armor | [[Dropdown|_Option Dropdown]] | The armor slot to check |
+| Check Material | check-mat | [[Boolean|_Option Boolean]] | Whether or not to check for a specific material |
+| Material | material | [[Dropdown|_Option Dropdown]] | The material to check for, if enabled |
+| Check Data | check-data | [[Boolean|_Option Boolean]] | Whether or not to check for a specific data value |
+| Data | data | [[Integer|_Option Integer]] | The item data value to look for, if enabled |
+| Check Lore | check-lore | [[Boolean|_Option Boolean]] | Whether or not to search the lore for a string |
+| Lore | lore | [[String|_Option String]] | The string to look for in the item's lore, if enabled |
+| Check Name | check-name | [[Boolean|_Option Boolean]] | Whether or not to search for a specific item name |
+| Name | name | [[String|_Option String]] | The required item name, if enabled |
+| Regex | regex | [[Boolean|_Option Boolean]] | Whether or not to treat Lore and Name options as regular expression strings |
+
+=== Description ===
+* Can be used to create custom item effects when done in passive skills
+
+=== Usage Examples ===
