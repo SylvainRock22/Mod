@@ -18,3 +18,4 @@ Child components are applied to each target wearing a piece of armor matching th
 * Can be used to create custom item effects when done in passive skills
 
 === Usage Examples ===
+-- To be added --
