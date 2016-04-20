@@ -1,0 +1,11 @@
+=== Accepted Values ===
+Real numbers (not expressions) or [[value keys|_Values]]
+
+=== Appearance ===
+A text box followed by a shorter text box
+
+{{https://people.rit.edu/sms6462/mc/img/scalingNumberOption.png}}
+
+=== Details ===
+* The first box is the base amount (used at skill/class level 1)
+* The second box is the additional amount per skill/class level
