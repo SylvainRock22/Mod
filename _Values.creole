@@ -1,0 +1,25 @@
+=== Overview ===
+Values are numbers set via skills that can be used in a variety of ways within dynamic skills. They are set using related mechanics.
+
+=== Related Mechanics ===
+* [[Value Add|_Mechanic Value Add]]
+* [[Value Attribute|_Mechanic Value Attribute]]
+* [[Value Lore|_Mechanic Value Lore]]
+* [[Value Multiply|_Mechanic Value Multiply]]
+* [[Value Random|_Mechanic Value Random]]
+* [[Value Set|_Mechanic Value Set]]
+
+=== Special Values ===
+| api-taken | The amount of damage a player received when using the [[Took Physical Damage|_Trigger Took Physical Damage]] trigger, the [[Took Skill Damage|_Trigger Took Skill Damage]] trigger, or the [[Environment Damage|_Trigger Environment Damage]] trigger |
+| api-dealt | The amount of damage a player dealt when using the [[Physical Damage|_Trigger Physical Damage]] trigger or the [[Skill Damage|_Trigger Skill Damage]] trigger |
+| ________
+
+=== Using Values ===
+[[Scaling Number|_Option Scaling Number]] or [[Scaling Time|_Option Scaling Time]] options can use the keys associated with a value instead of a regular number, allowing for more flexible effects
+
+=== Further Reading ===
+For visuals and examples of what you can do with values, read the tutorial page here:
+
+[[Advanced Values Tutorial|_Tutorial Advanced Values]]
+
+ 
