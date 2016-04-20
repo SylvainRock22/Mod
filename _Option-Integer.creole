@@ -1,0 +1,10 @@
+=== Accepted Values ===
+Any integer number (e.g. -5, 27, etc.)
+
+=== Appearance ===
+A single text box
+
+{{https://people.rit.edu/sms6462/mc/img/integerOption.png}}
+
+=== Details ===
+* If an invalid value is provided, this will default to a vale depending on the component
