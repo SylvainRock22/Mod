@@ -1,0 +1,13 @@
+=== Activation ===
+Child effects are activated when a player casts the skill using any of the casting methods.
+
+=== Options ===
+This trigger doesn't have any options.
+
+=== Details ===
+* Required to make a skill able to be cast
+* Automatically checks for cooldowns and mana cost before activation
+
+=== Usage Examples ===
+* [[Blink|https://skillexamples.herokuapp.com/?Blink]]
+* [[Repulse|https://skillexamples.herokuapp.com/?Repulse]]
