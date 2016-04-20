@@ -1,0 +1,14 @@
+=== Effect ===
+Grants bonus attributes to the targeted player
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Attribute | key | [[String|_Option String]] | The attribute to give (going by the root key you used, not the display) |
+| Amount | amount | [[Scaling Number|_Option Scaling Number]] | The number of points in the attribute to give |
+| Seconds | seconds | [[Scaling Time|_Option Scaling Time]] | How long the bonus should last in seconds |
+
+=== Details ===
+* Does nothing to targeted mobs or locations
+
+=== Usage Examples ===
+-- To be added --
