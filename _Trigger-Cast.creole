@@ -7,6 +7,7 @@ This trigger doesn't have any options.
 === Details ===
 * Required to make a skill able to be cast
 * Automatically checks for cooldowns and mana cost before activation
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 * [[Blink|https://skillexamples.herokuapp.com/?Blink]]
