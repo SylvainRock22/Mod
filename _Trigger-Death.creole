@@ -1,0 +1,13 @@
+=== Activation ===
+Child effects are activated when the caster dies
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Mana | mana | [[Boolean|_Option Boolean]] | Whether or not to use the mana cost before triggering |
+| Cooldown | cooldown | [[Boolean|_Option Boolean]] | Whether or not to check cooldowns before triggering |
+
+=== Details ===
+* Death is also covered in the [[Cleanup|_Trigger Cleanup]] trigger, so this should only be for effects specific to death
+
+=== Usage Examples ===
+-- To be added --
