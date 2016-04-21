@@ -7,7 +7,7 @@ Child effects are activated when a player kills something
 | Cooldown | cooldown | [[Boolean|_Option Boolean]] | Whether or not to check cooldowns before triggering |
 
 === Details ===
--- To be added --
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 -- To be added --
