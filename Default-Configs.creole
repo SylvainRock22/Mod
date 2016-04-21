@@ -617,225 +617,286 @@ class:
 }}}
 == commands.yml ==
 {{{
-class:
-  name: class
-  sender: ANYONE
-  enabled: true
-bind:
-  name: bind
-  description: Binds a skill
-  permission: skillapi.basic
-  args: <skill>
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    no-item: '&4You are not holding an item'
-    not-skill: '&4You do not have that skill'
+class: 
+  name: 'class'
+  sender: 'ANYONE'
+  enabled: 'true'
+  cooldown: 0
+acc: 
+  name: 'acc'
+  description: 'Changes account'
+  permission: 'skillapi.basic'
+  args: '<accountId>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
+    account-changed: '&2Your account has been changed'
+    not-account: '&cThat is not a valid account ID'
+  cooldown: 0
+bind: 
+  name: 'bind'
+  description: 'Binds a skill'
+  permission: 'skillapi.basic'
+  args: '<skill>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+  messages: 
     skill-bound: '&6{skill} &2has been bound to &6{item}'
-cast:
-  name: cast
-  description: Casts a skill
-  permission: skillapi.basic
-  args: <skill>
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    not-skill: '&cThat is not a valid skill name'
-clearbind:
-  name: clearbind
-  description: Clears skill binds
-  permission: skillapi.basic
+cast: 
+  name: 'cast'
+  description: 'Casts a skill'
+  permission: 'skillapi.basic'
+  args: '<skill>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+clearbind: 
+  name: 'clearbind'
+  description: 'Clears skill binds'
+  permission: 'skillapi.basic'
   args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    skills-unbound: '&2All skill bindings have been cleared'
-exp:
-  name: exp
-  description: Gives players exp
-  permission: skillapi.level
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+exp: 
+  name: 'exp'
+  description: 'Gives players exp'
+  permission: 'skillapi.level'
   args: '[player] <amount>'
-  sender: ANYONE
-  enabled: true
-  messages:
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
     received-exp: '&2You have received &6{exp} experience &2from &6{player}'
-    gave-exp: '&2You have given &6{player} {exp} experience'
-    not-player: '&cThat is not a valid player name'
-    not-positive: '&cYou must give a positive amount of experience'
-    not-number: '&cThat is not a valid experience amount'
-info:
-  name: info
-  description: Shows class info
-  permission: skillapi.basic
+  cooldown: 0
+info: 
+  name: 'info'
+  description: 'Shows class info'
+  permission: 'skillapi.basic'
   args: '[player]'
-  sender: ANYONE
-  enabled: true
-  messages:
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
     title: '&8--&2 {player} &8-----------'
     separator: '&8----------------------------'
     category: '&6{group}&7: '
     profession: '&bLv{level} &2{profession}'
     exp: '&bExp &2{exp}'
     end: '&8----------------------------'
-    needs-player: '&cA player name is required from the console'
-level:
-  name: level
-  description: Gives players levels
-  permission: skillapi.level
+    no-class: '&7Not Professed'
+  cooldown: 0
+level: 
+  name: 'level'
+  description: 'Gives players levels'
+  permission: 'skillapi.level'
   args: '[player] <amount>'
-  sender: ANYONE
-  enabled: true
-  messages:
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
     received-level: '&2You have received &6{level} levels &2from &6{player}'
-    gave-level: '&2You have given &6{player} {level} levels'
-    not-player: '&cThat is not a valid player name'
-    not-positive: '&cYou must give a positive amount of levels'
-    not-number: '&cThat is not a valid level amount'
-mana:
-  name: mana
-  description: Gives player mana
-  permission: skillapi.mana
+  cooldown: 0
+list: 
+  name: 'list'
+  description: 'Displays accounts'
+  permission: 'skillapi.basic'
+  args: '[player]'
+  sender: 'ANYONE'
+  enabled: 'true'
+  cooldown: 0
+  messages: 
+    title: '&8--&2 {player} &8-----------'
+    line: '&7[&6{id}&7] &2Lv&6{level} {class}'
+    end: '&8----------------------------'
+lore: 
+  name: 'lore'
+  description: 'Adds lore to item'
+  permission: 'skillapi.lore'
+  args: '<lore>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+  messages: 
+    lore-added: '&2The lore has been added to your item'
+mana: 
+  name: 'mana'
+  description: 'Gives player mana'
+  permission: 'skillapi.mana'
   args: '[player] <amount>'
-  sender: ANYONE
-  enabled: true
-  messages:
-    not-player: '&cThat is not a valid player name'
-    not-number: '&cThat is not a valid mana amount'
-    not-positive: '&cYou must give a positive amount of mana'
-    gave-mana: '&2You have given &6{player} {mana} mana'
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
     received-mana: '&2You have received &6{mana} mana &2from &6{player}'
-options:
-  name: options
-  description: Views profess options
-  permission: skillapi.basic
+  cooldown: 0
+options: 
+  name: 'options'
+  description: 'Views profess options'
+  permission: 'skillapi.basic'
   args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
     title: '&8--&2 Profess Options &8-----------'
     category: '&6{category}&7: '
     option: '&d{option}&7'
     separator: '&8----------------------------'
     no-options: '&7None'
     end: '&8----------------------------'
-points:
-  name: points
-  description: Gives player points
-  permission: skillapi.points
+  cooldown: 0
+points: 
+  name: 'points'
+  description: 'Gives player points'
+  permission: 'skillapi.points'
   args: '[player] <amount>'
-  sender: ANYONE
-  enabled: true
-  messages:
-    not-player: '&cThat is not a valid player name'
-    not-positive: '&cYou must give a positive amount of skill points'
-    not-number: '&cThat is not a valid skill point amount'
-    gave-points: '&2You have given &6{player} {points} skill points'
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
     received-points: '&2You have received &6{points} skill points &2from &6{player}'
-profess:
-  name: profess
-  description: Professes classes
-  permission: skillapi.basic
-  args: <class>
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
+  cooldown: 0
+profess: 
+  name: 'profess'
+  description: 'Professes classes'
+  permission: 'skillapi.basic'
+  args: '<class>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
     professed: '&2You are now a &6{class}'
-    cannot-profess: '&cYou cannot profess to this class currently'
     invalid-class: '&cThat is not a valid class'
-skill:
-  name: skill
-  description: Shows player skills
-  permission: skillapi.basic
+    cannot-profess: '&cYou cannot profess to this class currently'
+  cooldown: 0
+reload: 
+  name: 'reload'
+  description: 'Reloads the plugin'
+  permission: 'skillapi.reload'
   args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    no-skills: '&cYou have no skills to view'
-unbind:
-  name: unbind
-  description: Unbinds held item
-  permission: skillapi.basic
-  args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    skill-unbound: '&6{skill} &2has been unbound from &6{item}'
-    no-item: '&4You are not holding an item'
-    not-bound: '&4There are no skills bound to the held item'
-bar:
-  name: bar
-  description: Toggles skill bar
-  permission: skillapi.basic
-  args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    toggle-off: '&2Your skill bar has been &2disabled'
-    toggle-on: '&2Your skill bar has been &6enabled'
-acc:
-  name: acc
-  description: Changes account
-  permission: skillapi.basic
-  args: <accountId>
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    not-account: '&cThat is not a valid account ID'
-    account-changed: '&2Your account has been changed'
-list:
-  name: list
-  description: Displays accounts
-  permission: skillapi.basic
-  args: '[player]'
-  sender: ANYONE
-  enabled: true
-  messages:
-    title: '&8--&2 {player} &8-----------'
-    line: '&7[&6{id}&7] &2Lv&6{level} {class}'
-    end: '&8----------------------------'
-    needs-player: '&cA player name is required from the console'
-forceaccount:
-  name: forceaccount
-  description: Changes player's account
-  args: <player> <accountId>
-  sender: CONSOLE_ONLY
-  enabled: true
-  permission: skillapi.force
-  messages:
-    not-player: '&4That is not a valid player name'
-    not-account: '&cThat is not a valid account ID'
-    account-changed: '&6{player}''s&2 active account has been changed'
-    target-notice: '&2Your account has been forced to &6Account #{account}'
-reload:
-  name: reload
-  description: Reloads the plugin
-  permission: skillapi.reload
-  args: ''
-  sender: ANYONE
-  enabled: true
-  messages:
+  sender: 'ANYONE'
+  enabled: 'true'
+  cooldown: 0
+  messages: 
     done: '&2The plugin has been reloaded'
-forceprofess:
-  name: forceprofess
-  description: Professes a player
-  permission: skillapi.force
-  args: <player> <class>
-  sender: CONSOLE_ONLY
-  enabled: true
-  messages:
-    not-player: '&cThat is not a valid player name'
-    cannot-profess: '&cThey cannot profess to this class currently'
+reset: 
+  name: 'reset'
+  description: 'Resets account data'
+  permission: 'skillapi.basic'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
+    reset: '&2You have reset your active account data'
+    confirm: "&4This will delete your active account's data entirely"
+    instructions: '&7Type &6/class reset confirm&7 to continue'
+  cooldown: 0
+skill: 
+  name: 'skill'
+  description: 'Shows player skills'
+  permission: 'skillapi.basic'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
+    map-given: '&2You were given the skill tree map. Hold it in your hand to view skills.'
+    map-owned: '&cYou already have the skill tree map'
+    no-skills: '&cYou have no skills to view'
+  cooldown: 0
+unbind: 
+  name: 'unbind'
+  description: 'Unbinds held item'
+  permission: 'skillapi.basic'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+forceaccount: 
+  name: 'forceaccount'
+  description: "Changes player's account"
+  permission: 'skillapi.force'
+  args: '<player> <accountId>'
+  sender: 'CONSOLE_ONLY'
+  enabled: 'true'
+  cooldown: 0
+forceprofess: 
+  name: 'forceprofess'
+  description: 'Professes a player'
+  permission: 'skillapi.force'
+  args: '<player> <class>'
+  sender: 'CONSOLE_ONLY'
+  enabled: 'true'
+  messages: 
     success: '&6{player}&2 is now a &6{class}'
     professed: '&2You are now a &6{class}'
-reset:
-  name: reset
-  description: Resets account data
-  permission: skillapi.basic
+  cooldown: 0
+bar: 
+  name: 'bar'
+  description: 'Toggles skill bar'
+  permission: 'skillapi.basic'
   args: ''
-  sender: PLAYER_ONLY
-  enabled: true
-  messages:
-    reset: '&2You have reset your active account data'
-    confirm: '&4This will delete your active account''s data entirely'
-    instructions: '&7Type &6/class reset confirm&7 to continue'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  messages: 
+    toggle-on: '&2Your skill bar has been &6enabled'
+    in-creative: '&4You cannot be in creative mode'
+    toggle-off: '&2Your skill bar has been &2disabled'
+    no-class: '&4You have not professed as any class yet'
+  cooldown: '0'
+combo: 
+  name: 'combo'
+  description: 'Sets skill combo'
+  permission: 'skillapi.basic'
+  args: '<skill> <combo>'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: '0'
+ap: 
+  name: 'ap'
+  description: 'Gives attrib points'
+  permission: 'skillapi.attrib'
+  args: '[player] <amount>'
+  sender: 'ANYONE'
+  enabled: 'true'
+  messages: 
+    received-points: '&2You have received &6{points} attribute points &2from &6{player}'
+  cooldown: 0
+attr: 
+  name: 'attr'
+  description: 'Opens attribute menu'
+  permission: 'skillapi.basic'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
+scheme: 
+  name: 'scheme'
+  description: 'Views/sets map schemes'
+  permission: 'skillapi.basic'
+  args: '[scheme]'
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: '0'
+forcecast: 
+  name: 'forcecast'
+  description: 'Player casts the skill'
+  permission: 'skillapi.force'
+  args: '<player> <skill> [level]'
+  sender: 'CONSOLE_ONLY'
+  enabled: 'true'
+  cooldown: 0
+forceattr: 
+  name: 'forceattr'
+  description: 'Refunds attributes'
+  permission: 'skillapi.force'
+  args: '<player> [attr] [amount]'
+  sender: 'CONSOLE_ONLY'
+  enabled: 'true'
+  cooldown: 0
+  messages: 
+    not-player: '&cThat is not a valid player name'
+    reset: "&6{player}'s &2attributes were refunded"
+customize: 
+  name: 'customize'
+  description: 'Opens GUI editor'
+  permission: 'skillapi.gui'
+  args: ''
+  sender: 'PLAYER_ONLY'
+  enabled: 'true'
+  cooldown: 0
 }}}
