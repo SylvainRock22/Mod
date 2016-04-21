@@ -9,6 +9,7 @@ Child effects are activated when a player casts the skill using any of the casti
 
 === Details ===
 * Can be used in conjunction with "Launch" or another mobility skill to create effects on impact
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 -- To be added --
