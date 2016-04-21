@@ -8,7 +8,7 @@ Child effects are activated when a player casts the skill using any of the casti
 | Type | type | [[Dropdown|_Option Dropdown]] | Type of crouching to look for |
 
 === Details ===
-* Using the mana or cooldown options will check them every time the player hits the shift key
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 -- To be added --
