@@ -1,0 +1,17 @@
+=== Activation ===
+Child effects are activated when a player gets damaged by a skill
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Mana | mana | [[Boolean|_Option Boolean]] | Whether or not to use the mana cost before triggering |
+| Cooldown | cooldown | [[Boolean|_Option Boolean]] | Whether or not to check cooldowns before triggering |
+| Target Caster | caster | [[Boolean|_Option Boolean]] | Whether or not to target the caster |
+| Min Damage | dmg-min | [[Integer|_Option Integer]] | The minimum dealt damage required to trigger |
+| Max Damage | dmg-max | [[Integer|_Option Integer]] | The maximum dealt damage required to trigger |
+
+=== Details ===
+* The "Cancel" mechanic will stop the original damage
+* The [[value key|_Values]] "api-taken" is provided and set to the amount of damage dealt to the player
+
+=== Usage Examples ===
+-- To be added --
