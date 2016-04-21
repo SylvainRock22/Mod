@@ -7,6 +7,7 @@ This trigger doesn't have any options
 === Details ===
 * Only applies on login or respawn if the skill was already unlocked
 * This is the only trigger that should ever contain the [[Passive|_Mechanic Passive]]
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 * [[Light Feet|https://skillexamples.herokuapp.com/?Light%20Feet]]
