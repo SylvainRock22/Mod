@@ -6,6 +6,7 @@ This trigger doesn't have any options.
 
 === Details ===
 * Used to clean up passive effects such as permanent flags
+* The [[Cancel|_Mechanic Cancel]] mechanic will not do anything to this trigger
 
 === Usage Examples ===
 -- To be Added --
