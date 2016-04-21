@@ -1,0 +1,14 @@
+=== Activation ===
+Child effects are activated when a player logs in, respawns, or unlocks the skill
+
+=== Options ===
+This trigger doesn't have any options
+
+=== Details ===
+* Only applies on login or respawn if the skill was already unlocked
+* This is the only trigger that should ever contain the [[Passive|_Mechanic Passive]]
+
+=== Usage Examples ===
+* [[Light Feet|https://skillexamples.herokuapp.com/?Light%20Feet]]
+* [[Motivation|https://skillexamples.herokuapp.com/?Motivation]]
+* [[Regeneration|https://skillexamples.herokuapp.com/?Regeneration]]
