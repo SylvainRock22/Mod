@@ -13,7 +13,7 @@ Applies child elements to all targets in a radius around the current location(s)
 * The shape of the area depends on how it's used
 ** As a child of an Offset or Location target, it's a sphere
 ** Otherwise, it's a Cuboid
-* If an Area target is a child (direct or indirect) of another Area target:
+* If it's a child of another AOE target:
 ** The child will apply for every target of the parent one
 ** Overlapping targets will be affected multiple times
 
