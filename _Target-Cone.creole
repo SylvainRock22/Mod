@@ -12,7 +12,7 @@ Applies child elements to all targets in a radius around the current location(s)
 
 === Details ===
 * The cone is an actual cone, as it calculates distance from the forward direction
-* If a Cone target is a child of an [[Area|_Target Area]] target or another Cone target:
+* If it's a child of another AOE target:
 ** The child will apply for every target of the parent one
 ** Overlapping targets will be affected multiple times
 
