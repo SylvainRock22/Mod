@@ -1,0 +1,19 @@
+=== Targets ===
+Applies child elements to all targets in a radius around the current location(s).
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Range | range | [[Scaling Number|_Option Scaling Number]] | How far the cone reaches |
+| Angle | angle | [[Scaling Number|_Option Scaling Number]] | The angle, in degrees, of the cone |
+| Group | group | [[Dropdown|_Option Dropdown]] | The type of targets to affect between allies, enemies, or both |
+| Through Wall | wall | [[Boolean|_Option Boolean]] | Whether or not to grab targets through blocks |
+| Include Caster | caster | [[Boolean|_Option Boolean]] | Whether or not the caster should also be targeted |
+| Max Targets | max | [[Scaling Number|_Option Scaling Number]] | How many targets are allowed to be affected |
+
+=== Details ===
+* If a Cone target is a child of an [[Area|_Target Area]] target or another Cone target:
+** The child will apply for every target of the parent one
+** Overlapping targets will be affected multiple times
+
+=== Usage Examples ===
+* [[Funnel|https://skillexamples.herokuapp.com/?Funnel]]
