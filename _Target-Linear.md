@@ -1,0 +1,20 @@
+=== Targets ===
+Applies child elements to all targets in a radius around the current location(s).
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Radius | radius | [[Scaling Number|_Option Scaling Number]] | How large of a radius (in blocks) to affect |
+| Tolerance | tolerance | [[Scaling Number|_Option Scaling Number]] | How lenient to be for aiming |
+| Group | group | [[Dropdown|_Option Dropdown]] | The type of targets to affect between allies, enemies, or both |
+| Through Wall | wall | [[Boolean|_Option Boolean]] | Whether or not to grab targets through blocks |
+| Include Caster | caster | [[Boolean|_Option Boolean]] | Whether or not the caster should also be targeted |
+| Max Targets | max | [[Scaling Number|_Option Scaling Number]] | How many targets are allowed to be affected |
+
+=== Details ===
+* The line follows the crosshair, rather than along the ground
+* If it's a child of another AOE target:
+** The child will apply for every target of the parent one
+** Overlapping targets will be affected multiple times
+
+=== Usage Examples ===
+-- To be added --
