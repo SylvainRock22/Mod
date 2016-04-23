@@ -1,0 +1,14 @@
+=== Targets ===
+Applies child elements at the location the caster is looking at
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Range | range | [[Scaling Number|_Option Scaling Number]] | How far away to be able to target |
+
+=== Details ===
+* Most mechanics will not do anything to the location, as it isn't an actual target
+* Should be combined with other targets such as [[Area|_Target Area]]
+* Can be used to make traps when used with [[Repeat|_Mechanic Repeat]]
+
+=== Usage Examples ===
+-- To be added --
