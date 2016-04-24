@@ -17,5 +17,4 @@ Applies child elements to all targets in a radius around the current location(s)
 ** Overlapping targets will be affected multiple times
 
 === Usage Examples ===
-* [[Head Smash|https://skillexamples.herokuapp.com/?Head%20Smash]]
-* [[Powerful Blow|https://skillexamples.herokuapp.com/?Powerful%20Blow]]
+-- To be added --
