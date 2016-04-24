@@ -9,4 +9,4 @@ A text box followed by a shorter text box
 === Details ===
 * The first box is the base amount (used at skill/class level 1)
 * The second box is the additional amount per skill/class level
-* These options can also be affected by [[Attributes|Attributes]]
+* These options can also be affected by [[attributes|Attributes]]
