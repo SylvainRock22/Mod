@@ -11,7 +11,7 @@ Applies child elements at a location offset from the current target.
 * Useful for positioning effects such as particles
 * Offset directions are flattened, so forward would not rise up into the air at all
 * Most mechanics will not do anything to the location, as it isn't an actual target
-* Should be combined with other targets such as [[Area|_Target Area]]
+* Usually combined with other targets such as [[Area|_Target Area]]
 * Can be used to make traps when used with [[Repeat|_Mechanic Repeat]]
 * Using [[Value Add|_Mechanic Value Add]] along with this can make traveling effects
 
