@@ -10,6 +10,7 @@ Child effects are activated when a player launches a projectile
 === Details ===
 * Projectiles launched by skills will also trigger this unless launched within the same trigger
 * The "Cancel" mechanic will stop the original projectile from being launched
+* The [[value key|_Values]] "api-velocity" is provided and set to the launch speed of the projectile
 
 === Usage Examples ===
 -- To be added --
