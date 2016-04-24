@@ -33,11 +33,11 @@ You can find the editor here:
 === Conditions ===
 | [[Armor|_Condition Armor]] | [[Attribute|_Condition Attribute]] | [[Biome|_Condition Biome]] | [[Block|_Condition Block]] | 
 | [[Chance|_Condition Chance]] | [[Class|_Condition Class]] | [[Class Level|_Condition Class Level]] | [[Combat|_Condition Combat]] | 
-| [[Direction|_Condition Direction]] | [[Elevation|_Condition Elevation]] | [[Fire|_Condition Fire]] | [[Flag|_Condition Flag]] | 
-| [[Health|_Condition Health]] | [[Inventory|_Condition Inventory]] | [[Item|_Condition Item]] | [[Light|_Condition Light]] | 
-| [[Mana|_Condition Mana]] | [[Name|_Condition Name]] | [[Offhand|_Condition Offhand]] | [[Potion|_Condition Potion]] | 
-| [[Skill Level|_Condition Skill Level]] | [[Status|_Condition Status]] | [[Time|_Condition Time]] | [[Tool|_Condition Tool]] | 
-| [[Value|_Condition Value]] | [[Water|_Condition Water]] | 
+| [[Crouch|_Condition Crouch]] | [[Direction|_Condition Direction]] | [[Elevation|_Condition Elevation]] | [[Fire|_Condition Fire]] | 
+| [[Flag|_Condition Flag]] | [[Health|_Condition Health]] | [[Inventory|_Condition Inventory]] | [[Item|_Condition Item]] | 
+| [[Light|_Condition Light]] | [[Mana|_Condition Mana]] | [[Name|_Condition Name]] | [[Offhand|_Condition Offhand]] | 
+| [[Potion|_Condition Potion]] | [[Skill Level|_Condition Skill Level]] | [[Status|_Condition Status]] | [[Time|_Condition Time]] | 
+| [[Tool|_Condition Tool]] | [[Value|_Condition Value]] | [[Water|_Condition Water]] | 
 
 === Mechanics ===
 | [[Attribute|_Mechanic Attribute]] | [[Block|_Mechanic Block]] | [[Cancel|_Mechanic Cancel]] | [[Channel|_Mechanic Channel]] | 
