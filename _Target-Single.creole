@@ -1,0 +1,17 @@
+=== Targets ===
+Applies child elements to the target being looked at
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Range | range | [[Scaling Number|_Option Scaling Number]] | How far away the target can be |
+| Tolerance | tolerance | [[Scaling Number|_Option Scaling Number]] | How lenient to be for aiming |
+| Group | group | [[Dropdown|_Option Dropdown]] | The type of targets to affect between allies, enemies, or both |
+| Through Wall | wall | [[Boolean|_Option Boolean]] | Whether or not to grab targets through blocks |
+| Include Caster | caster | [[Boolean|_Option Boolean]] | Whether or not the caster should also be targeted |
+
+=== Details ===
+* This is relative to the current target(s) and applies for each
+
+=== Usage Examples ===
+* [[Head Smash|https://skillexamples.herokuapp.com/?Head%20Smash]]
+* [[Powerful Blow|https://skillexamples.herokuapp.com/?Powerful%20Blow]]
