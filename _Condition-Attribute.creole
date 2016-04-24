@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each player target that has the required attribute amount
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Attribute | attribute | [[String|_Option String]] | The attribute to require, matching the root key rather than the display |
+| Min | min | [[Scaling Number|_Option Scaling Number]] | The minimum amount of the attribute the player needs |
+| Max | max | [[Scaling Number|_Option Scaling Number]] | The maximum amount of the attribute the player needs |
+
+=== Description ===
+* This checks for total attribute points, including equipment bonuses, class attributes, and attribute buffs
+
+=== Usage Examples ===
+-- To be added --
