@@ -1,0 +1,12 @@
+=== Targets ===
+Switches the current target(s) to those set using the [[Remember Targets|_Mechanic Remember Targets]] mechanic.
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Key | key | [[String|_Option String]] | The key the target was remembered using |
+
+=== Details ===
+* Wolf skills, as provided in the [[Wolf|_Mechanic Wolf]] mechanic can use "api-owner" to target the player who summoned the wolf
+
+=== Usage Examples ===
+-- To be added --
