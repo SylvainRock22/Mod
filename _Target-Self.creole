@@ -1,0 +1,12 @@
+=== Targets ===
+Applies child effects to the caster
+
+=== Options ===
+This target has no options
+
+=== Details ===
+* The default target for most triggers is the caster, so this isn't needed most of the time
+* If used within an AOE target, this will apply effects onto the caster for each target affected
+
+=== Usage Examples ===
+-- To be added --
