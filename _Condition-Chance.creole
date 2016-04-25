@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each target if a chance roll succeeds
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Chance | chance | [[Scaling Number|_Option Scaling Number]] | The percentage chance to apply child effects |
+
+=== Description ===
+* The chance is read as a percentage, meaning 25 would be treated as a 25% or 1 in 4 chance
+* A chance of 0 or less will never apply children
+* A chance of 100 or more will always apply children
+
+=== Usage Examples ===
+-- To be added --
