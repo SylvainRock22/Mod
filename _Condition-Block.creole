@@ -1,0 +1,13 @@
+=== Condition ===
+Child components are applied to each target in a biome meeting the requirements
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | Whether to check for being on or off a type of block |
+| Material | material | [[Dropdown|_Option Dropdown]] | The block type to look for |
+
+=== Description ===
+* Block types are according to the [[Material enum|https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html]]
+
+=== Usage Examples ===
+-- To be added --
