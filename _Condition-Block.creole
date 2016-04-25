@@ -1,5 +1,5 @@
 === Condition ===
-Child components are applied to each target in a biome meeting the requirements
+Child components are applied to each target standing on a block fulfilling to the requirements
 
 === Options ===
 |= Name |= YAML Key |= Type |= Description |
