@@ -1,0 +1,13 @@
+=== Condition ===
+Child components are applied to each target if the caster meets the class requirement
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Min Level | min-level | [[Integer|_Option Integer]] | The minimum required class level |
+| Max Level | max-level | [[Integer|_Option Integer]] | The maximum required class level |
+
+=== Description ===
+* Regardless of the targets, this will check the caster's class level
+
+=== Usage Examples ===
+-- To be added --
