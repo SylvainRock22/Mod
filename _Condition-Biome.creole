@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each target in a biome meeting the requirements
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | Whether to check for being in or out of the biome |
+| Biome | biome | [[Binary List|_Option Binary List]] | The biomes to look for |
+
+=== Description ===
+* When searching for in a biome, the target must be any of the selected biomes
+* When searching for out of a biome, the target must not be in any of the selected biomes
+
+=== Usage Examples ===
+-- To be added --
