@@ -1,11 +1,11 @@
 === Accepted Values ===
-Must be an integer representing the bit options added together
+Must be one of the options provided in the dropdown in the editor most of the time
 
 === Appearance ===
-A series of checkboxes
+A combo box with a list of accepted values
 
-{{https://people.rit.edu/sms6462/mc/img/binaryListOption.png}}
+{{https://people.rit.edu/sms6462/mc/img/dropdownOption.png}}
 
 === Details ===
-* Each check box corresponds to a bit in an integer
-* The first option's equivalent value is 1, while each one after is twice the previous
+* Options provided are not case-sensitive in case of manual edits
+* Options corresponding to Bukkit/Minecraft enums (such as particle types, materials, etc.) can be manually set to an option not in the editor and it will work, given it's a valid enum value
