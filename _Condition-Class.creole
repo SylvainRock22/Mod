@@ -1,0 +1,13 @@
+=== Condition ===
+Child components are applied to each player target that is the designated class
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Class | class | [[String|_Option String]] | The class to look for |
+| Exact | exact | [[Boolean|_Option Boolean]] | Whether or not to require the class specifically instead of it and it's subclasses |
+
+=== Description ===
+* If exact is false, any classes the specified one turns into will be included
+
+=== Usage Examples ===
+-- To be added --
