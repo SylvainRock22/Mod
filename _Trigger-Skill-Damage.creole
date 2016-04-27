@@ -12,6 +12,8 @@ Child effects are activated when a player damages something with a skill
 === Details ===
 * The "Cancel" mechanic will stop the damage from happening
 * The [[value key|_Values]] "api-dealt" is provided and set to the amount of damage dealt by the player
+* Using [[Damage Buff|_Mechanic Damage Buff]] on the caster without a delay will affect the current attack
+* Using [[Defense Buff|_Mechanic Defense Buff]] on the hit entity without a delay will affect the current attack
 
 === Usage Examples ===
 -- To be added --
