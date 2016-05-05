@@ -1,0 +1,12 @@
+=== Condition ===
+Child components are applied to each target that is on fire
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | Whether or not the target should be on fire |
+
+=== Description ===
+* This checks the target's "fire ticks" value, not if they're taking damage from fire
+
+=== Usage Examples ===
+-- To be added --
