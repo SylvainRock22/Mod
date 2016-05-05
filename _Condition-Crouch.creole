@@ -1,0 +1,13 @@
+=== Condition ===
+Child components are applied to each player target if they are crouching or not according to the settings.
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Crouching | crouch | [[Boolean|_Option Boolean]] | Whether or not the target should be crouching |
+
+=== Description ===
+* Crouching is sneaking (shift click)
+* Can be used with the [[Crouch|_Trigger Crouch]] to handle both cases
+
+=== Usage Examples ===
+-- To be added --
