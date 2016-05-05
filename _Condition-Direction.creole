@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each target depending on if the target or caster is facing towards or away from the other depending on settings.
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | Whether or not the target needs to be looking in a direction or the caster |
+| Direction | direction| [[Dropdown|_Option Dropdown]] | Whether or not they have to be facing towards or away |
+
+=== Description ===
+* Direction is determined using a 180 degree assumption. The line would essentially be perpendicular to their line of sight
+* Can handle backstabs by having the type as "Target" and the direction as "Away"
+
+=== Usage Examples ===
+-- To be added --
