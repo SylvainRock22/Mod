@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each target if a chance roll succeeds
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_OptionDropdown]] | Whether to check the elevation as a coordinate or the difference between the caster and the target's elevation |
+| Min Value | min-value | [[Scaling Number|_Option Scaling Number]] | The minimum elevation or elevation difference |
+| Max Vale | max-value | [[Scaling Number|_Option Scaling Number]] | The maximum elevation or elevation difference |
+
+=== Description ===
+* The "Difference" type uses the value (targetY - casterY) so positive would mean the target is higher up than the caster
+
+=== Usage Examples ===
+-- To be added --
