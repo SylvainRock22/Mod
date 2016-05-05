@@ -1,0 +1,13 @@
+=== Condition ===
+Child components are applied to each target if they have a flag set on them
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | Whether or not the flag should be set |
+| Key | key | [[String|_Option String]] | The key of the flag to check for |
+
+=== Description ===
+* Flags are target specific so the flag must've been set on the target in particular
+
+=== Usage Examples ===
+-- To be added --
