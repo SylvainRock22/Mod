@@ -12,6 +12,8 @@ Values are numbers set via skills that can be used in a variety of ways within d
 === Special Values ===
 | api-taken | The amount of damage a player received when using the [[Took Physical Damage|_Trigger Took Physical Damage]] trigger, the [[Took Skill Damage|_Trigger Took Skill Damage]] trigger, or the [[Environment Damage|_Trigger Environment Damage]] trigger |
 | api-dealt | The amount of damage a player dealt when using the [[Physical Damage|_Trigger Physical Damage]] trigger or the [[Skill Damage|_Trigger Skill Damage]] trigger |
+| api-velocity | The speed of a launched projectile when using the [[Launch|_Trigger Launch]] trigger |
+| api-distance | The fallen distance when using the [[Land|_Trigger Land]] trigger |
 | ________
 
 === Using Values ===
