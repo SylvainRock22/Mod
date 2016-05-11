@@ -14,7 +14,7 @@ Values are numbers set via skills that can be used in a variety of ways within d
 | api-dealt | The amount of damage a player dealt when using the [[Physical Damage|_Trigger Physical Damage]] trigger or the [[Skill Damage|_Trigger Skill Damage]] trigger |
 | api-velocity | The speed of a launched projectile when using the [[Launch|_Trigger Launch]] trigger |
 | api-distance | The fallen distance when using the [[Land|_Trigger Land]] trigger |
-| ________
+| ___________
 
 === Using Values ===
 [[Scaling Number|_Option Scaling Number]] or [[Scaling Time|_Option Scaling Time]] options can use the keys associated with a value instead of a regular number, allowing for more flexible effects
