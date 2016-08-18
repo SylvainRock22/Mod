@@ -17,7 +17,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 | [[Item Effects|Items]] | Can turn lore on items into various requirements or additional effects |
 | [[Attributes|Attributes]] | A versatile attributes system (Strength, Dexterity, etc.) you can fully customize |
 | [[Level Up Effects|Level Up]] | Level up effects that allow you do do just about anything |
-| [[Class and Skill Editor|Editor]] | A robust editor tool allowing you to easily make your own skills and classes without any code |
+| [[Class and Skill Editor|https://people.rit.edu/sms6462/mc/sapi/]] | A robust editor tool allowing you to easily make your own skills and classes without any code |
 | [[SQL Database|Database]] | Fully supports saving to an SQL database, allowing for cross-server use |
 | [[Experience Curves|Experience]] | Allows for fully custom experience curve formulas so you can control how fast players level |
 | [[Multiworld Support|Worlds]] | Can be disabled in any given world or worlds so it doesn't interfere with other game modes |
