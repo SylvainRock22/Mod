@@ -29,4 +29,4 @@ Usage:
 == Click Combinations ==
 Adds 4-click combos to each active skill in their descriptions that when clicked will cast the skill 
 This must be enabled in the config via the option "use-click-combos" 
-Usage: click the combination of left or right clicks or shift to cast a skill
+Usage: click the combination of left, right, and optionally shift clicks, to cast a skill
