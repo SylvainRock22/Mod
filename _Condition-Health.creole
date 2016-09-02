@@ -1,0 +1,14 @@
+=== Condition ===
+Child components are applied to each target with health matching the specified settings.
+
+=== Options ===
+|= Name |= YAML Key |= Type |= Description |
+| Type | type | [[Dropdown|_Option Dropdown]] | What to look for with the target's HP |
+| Min Value | min-value | [[Scaling Number|_Scaling Number]] | The minimum health (or percentage) needed |
+| Max Value | max-value | [[Scaling Number|_Scaling Number]] | The maximum health (or percentage) needed |
+
+=== Description ===
+* Using 0 as a minimum can be used for checking health below a certain threshold
+
+=== Usage Examples ===
+-- To be added --
