@@ -11,6 +11,7 @@ Latest build supports 1.7.x, 1.8.x, and 1.9.x servers
 * [[Permissions|Permissions]]
 * [[Default Configs|Default Configs]]
 === Features ===
+For a list of the features the premium version adds, see [[Premium Features|Premium Features]]
 | [[Classes|Classes]] | An in-depth class system is available for your RPG or minigame server with class progression, race support, and much more |
 | [[Skills|Skills]] | Fully customizable skills allow for endless possibilities, featuring a skill tree setup and multiple skill levels |
 | [[Casting Systems|Skill Casting]] | Offers a variety of casting systems you can choose between |
