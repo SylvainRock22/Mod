@@ -33,6 +33,7 @@ For a list of the features the premium version adds, see [[Premium Features|Prem
 | ____________
 
 === Useful Links ===
+* [[Premium Page|https://www.spigotmc.org/resources/skillapi-premium.28029/]]
 * [[Spigot Page|https://www.spigotmc.org/resources/skillapi.4824/]]
 * [[Bukkit Page|http://dev.bukkit.org/bukkit-plugins/skillapi/]]
 * [[Dynamic Tool|http://people.rit.edu/sms6462/mc/sapi/]]
