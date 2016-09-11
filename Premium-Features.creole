@@ -2,7 +2,7 @@
 These are the currently available features. This list will continue to grow over time.
 |= Category |= Features
 | Casting | [[Slot Casting | _Slot Casting]] \\ [[Custom Casting | _Custom Casting]]
-| Conditions | [[Else | _Condition Else]]
+| Conditions | [[Else | _Condition Else]] \\ [[Permission | _Condition Permission]]
 | Mechanics | [[Particle Effect | _Mechanic Particle Effect]] \\ [[Value Health | _Mechanic Value Health]] \\ [[Value Mana | _Mechanic Value Mana]] 
 | Configuration | [[Fully custom GUI layouts | _Custom GUIS]]
 | Optimizations | Asynchronous Tasks \\ Cached item data \\ Dynamic Event Registration \\ Nearest Target Efficiency \\ Parsed Formula Efficiency
