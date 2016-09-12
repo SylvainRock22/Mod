@@ -1,4 +1,4 @@
-{{http://people.rit.edu/sms6462/mc/img/titleWide.png|SkillAPI}}
+{{https://dev.bukkit.org/media/images/92/365/titleWide.png|SkillAPI}}
 ----
 === Overview ===
 SkillAPI is a robust RPG plugin, allowing for the creation of custom skills and classes without the need of touching any code. An editor is available for making the process easy, or you can tap into the code API if you want more control.
@@ -36,6 +36,6 @@ For a list of the features the premium version adds, see [[Premium Features|Prem
 * [[Premium Page|https://www.spigotmc.org/resources/skillapi-premium.28029/]]
 * [[Spigot Page|https://www.spigotmc.org/resources/skillapi.4824/]]
 * [[Bukkit Page|http://dev.bukkit.org/bukkit-plugins/skillapi/]]
-* [[Dynamic Tool|http://people.rit.edu/sms6462/mc/sapi/]]
+* [[Dynamic Tool|http://eniripsa96.github.io/SkillAPI/]]
 * [[Example Skills|https://skillexamples.herokuapp.com/]]
 * [[Help IRC|https://skillapi.herokuapp.com/]]
