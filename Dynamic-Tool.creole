@@ -1,7 +1,7 @@
 == Accessing the Editor ==
 You can find the editor here:
 
-[[Dynamic Tool|http://people.rit.edu/sms6462/mc/sapi/]]
+[[Dynamic Tool|http://eniripsa96.github.io/SkillAPI/]]
 
 == Things to Know ==
 | {{https://people.rit.edu/sms6462/mc/help/img/tooltip.png}} | Hovering over any option's label provides you with an explanatory bit of text. |
